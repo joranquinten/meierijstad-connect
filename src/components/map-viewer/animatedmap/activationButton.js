@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import './activationButton.scss'
 
 /** @type {{ event: string; event_action: string; event_label: string; }[]} */
-const dataLayer = window.dataLayer || []
 export const ActivationButton = ({
   // @ts-ignore
   activate,
@@ -20,11 +19,6 @@ export const ActivationButton = ({
         <div
           className='buttonText'
           onClick={() => {
-            dataLayer.push({
-              event: 'Interactions',
-              event_action: 'click',
-              event_label: 'map-activate'
-            })
             activate()
             setState(true)
           }}
@@ -37,11 +31,6 @@ export const ActivationButton = ({
         <div
           className='buttonText active'
           onClick={() => {
-            dataLayer.push({
-              event: 'Interactions',
-              event_action: 'click',
-              event_label: 'map-deactivate'
-            })
             deactivate()
             setState(false)
           }}
