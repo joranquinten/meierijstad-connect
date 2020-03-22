@@ -188,13 +188,13 @@ function AnimatedMap(props) {
     <>
       {mapObject && (
         <div className='activateDesktop'>
-          <ActivationButton
+          {/*<ActivationButton
             activate={() => mapObject.activateMap()}
             deactivate={() => mapObject.deactivateMap()}
             initialState={null}
             buttonText={['Activate map', 'Activate scrolling']}
             icons={['moving.svg', 'scrolling.svg']}
-          />
+          />*/}
         </div>
       )}
       <div id='map'>{props.children}</div>
