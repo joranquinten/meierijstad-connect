@@ -4,20 +4,13 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    author: 'Safdar Jamal',
-    title: 'Full-Stack Bootcamp;',
+    author: 'Marc Fehr',
+    title: 'Community Isolation Map',
     description:
-      'A minimal blogging site built with Gatsby using Contentful and hosted on Netlify.',
+      'This is the open source project for building your own community map.',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
-    {
-      resolve: 'gatsby-source-contentful',
-      options: {
-        spaceId: process.env.CONTENTFUL_SPACE_ID,
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-      },
-    },
     'gatsby-plugin-sass',
   ],
 };

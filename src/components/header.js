@@ -29,25 +29,25 @@ const Header = () => {
               activeClassName={styles.activeNavItem}
               to="/"
             >
-              Home
+              Map
             </Link>
           </li>
           <li>
             <Link
               className={styles.navItem}
               activeClassName={styles.activeNavItem}
-              to="/about"
+              to="/add"
             >
-              About
+              Add Info
             </Link>
           </li>
           <li>
             <Link
               className={styles.navItem}
               activeClassName={styles.activeNavItem}
-              to="/blog"
+              to="/news"
             >
-              Blog
+              News
             </Link>
           </li>
           <li>

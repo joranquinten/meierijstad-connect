@@ -7,8 +7,8 @@ const Index = () => {
   return (
     <Layout>
       <Head title="Home" />
-      <h1>Hello!</h1>
-      <h2>I'm Safdar, a full-stack developer.</h2>
+      <h1>This is the map view.</h1>
+      <h2>Here, we'll add the components to show the map.</h2>
     </Layout>
   );
 };

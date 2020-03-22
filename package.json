@@ -19,7 +19,6 @@
     "gatsby-cli": "^2.11.0",
     "gatsby-plugin-react-helmet": "^3.1.22",
     "gatsby-plugin-sass": "^2.1.28",
-    "gatsby-source-contentful": "^2.1.86",
     "node-sass": "^4.13.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",

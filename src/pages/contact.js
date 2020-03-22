@@ -9,8 +9,8 @@ const Contact = () => {
       <Head title="Contact" />
       <h1>Contact</h1>
       <p>
-        The best way to reach me is via{' '}
-        <a href="https://twitter.com/_safdarjamal">@_safdarjamal</a> on Twitter.
+        Information about how to get in touch. Also more information about the project.
+        Or hot wo follow <a href="https://twitter.com/@mrcfhr">@mrcfhr</a> on Twitter.
       </p>
     </Layout>
   );
