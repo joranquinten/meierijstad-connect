@@ -1,6 +1,7 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby';
 import Layout from '../components/layout';
+import { Link } from 'gatsby'
 import { MapViewComponent } from '../components/mapview.main'
 /* SEO Component with React Helmet */
 import Head from '../components/head'
@@ -31,9 +32,9 @@ const Index = () => {
               </span>
                 <div className='sub header'>
                   Check out the interactive map and stay in touch with the community during the coronavirus isolation.{' '}
-                  <a href='https://add.whozinberg.org'>
+                  <Link to={'/add'}>
                     Add more information to the map
-                  </a>
+                  </Link>
                   {' '}to help keeping everyone healthy.
                 </div>
               </div>
@@ -54,13 +55,13 @@ const Index = () => {
               <li>Also, there will be an option to offer <strong>help without being on a map</strong>, if the offered services are not bound to any location.</li>
               <li>The map <strong>will soon be available as an open source project on Github</strong>. Contact me via email for more info.</li>
             </ul>
-            <a
-              href='https://add.whozinberg.org'
+            <Link
+              to={'/add'}
               className='ui primary fluid button'
               style={{marginTop: '1rem'}}
             >
               Add information now
-            </a>
+            </Link>
             <h2>How can I delete myself from the app?</h2>
             <p>
               Write me an email to{' '}

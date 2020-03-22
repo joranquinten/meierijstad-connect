@@ -1,9 +1,7 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 
 import Categories from "./map-viewer/categories";
 import AnimatedMap from "./map-viewer/animatedmap/component";
-
-
 
 export function MapViewComponent() {
 	const [map, setMap] = useState(null)
