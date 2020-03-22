@@ -1,7 +1,4 @@
-
-
-/* ADDITIONAL STYLES */
-html {
+#map-view {
   // prevents "swimming" layout on mobile
   overflow: hidden;
   // add all styles that should apply to the whole project within this
@@ -13,13 +10,6 @@ html {
     color: #000 !important;
   }
 
-  .page-title {
-    font-family: 'Roboto', sans-serif;
-    color: black;
-    line-height: 0.9;
-    display: block;
-    font-size: 2em;
-  }
 
   h2 {
     font-size: 1.5em;
@@ -62,14 +52,14 @@ html {
 
     h2 {
       font-family: TamediaUI, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu,
-      Cantarell, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji,
-      Segoe UI Symbol, Noto Color Emoji !important;
+        Cantarell, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji,
+        Segoe UI Symbol, Noto Color Emoji !important;
       font-size: 1em;
       font-weight: bold;
     }
   }
 
-  #mapcontainer {
+  #map-container {
     position: relative;
   }
 }

@@ -1,0 +1,69 @@
+.popup {
+  max-width: 100%;
+  width: 350px;
+  font-family: TamediaUI, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu,
+    Cantarell, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji,
+    Segoe UI Symbol, Noto Color Emoji;
+
+  overflow: hidden;
+  font-size: 16px;
+
+  .badge {
+    background-color: #e8e8e8;
+    border-radius: 10px;
+    height: 25px;
+    // display: block;
+    overflow: hidden;
+    vertical-align: middle;
+    margin: 0 0 10px 0;
+    display: inline-block;
+    font-size: 0.8em;
+
+    .text {
+      padding: 3px 0;
+      margin: 0 15px;
+      position: relative;
+      display: inline-block;
+      font-weight: bold;
+    }
+
+    .colorindicator {
+      content: '';
+      width: 25px;
+      height: 25px;
+      // display: inline-block;
+      float: left;
+    }
+    .needhelp {
+      background-color: #de77ae;
+    }
+
+    .couldhelp {
+      background-color: #4d9221;
+    }
+  }
+
+  .clearfix {
+    content: '';
+    clear: both;
+    display: block;
+  }
+
+  h2 {
+    padding: 15px 0 0 0;
+    margin: 0;
+    font-size: 0.8em !important;
+    // text-transform: uppercase;
+    color: grey;
+    font-weight: bold;
+    font-family: TamediaUI, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu,
+      Cantarell, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji,
+      Segoe UI Symbol, Noto Color Emoji;
+  }
+
+  p {
+    // font-family: TamediaText,Georgia,serif;
+    line-height: 1.5;
+    font-size: 1rem;
+  }
+}

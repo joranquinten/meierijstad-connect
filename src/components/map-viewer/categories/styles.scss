@@ -1,0 +1,49 @@
+.categories {
+  padding: 0 0 20px;
+
+  button {
+    margin: 2px !important;
+  }
+
+  .basic {
+    border: 1px solid;
+  }
+
+  /* Colors */
+  .books {
+    color: green;
+  }
+  .ui.books.button {
+    color: rgb(88, 145, 74) !important;
+    -webkit-box-shadow: 0 0 0 0 #e23c4e inset !important;
+    box-shadow: inset 0 0 0 0 #e23c4e !important;
+    color: #3ce273 !important;
+    border: 1px solid !important;
+  }
+
+  $categories: all childcare food takeaway medical shop information safespace petcare other;
+  $cat_colors: black #1289A7 #D980FA #30336b #d35400 #8e44ad #2980b9 #7f8c8d #e1b12c #222f3e;
+
+  @each $cat in $categories {
+    $i: index($categories, $cat);
+    $c: nth($cat_colors, $i);
+
+    .ui.basic.#{$cat}.button,
+    .ui.basic.#{$cat}.buttons .button {
+      color: $c !important;
+    }
+
+    .ui.basic.#{$cat}.button:hover,
+    .ui.basic.#{$cat}.buttons .button:hover {
+      background: rgba($c, 0.2) !important;
+      -webkit-box-shadow: 0 0 0 0 $c inset !important;
+      box-shadow: inset 0 0 0 0 $c !important;
+      color: $c !important;
+    }
+
+    .ui.basic.#{$cat}.selected.button,
+    .ui.basic.#{$cat}.selected.buttons .button {
+      background: rgba($c, 0.2) !important;
+    }
+  }
+}

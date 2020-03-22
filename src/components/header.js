@@ -1,66 +1,59 @@
 import React from 'react';
-import { useStaticQuery, graphql, Link } from 'gatsby';
+import { useStaticQuery, graphql } from 'gatsby';
 
-import styles from './header.module.scss';
+/* Additional Header Styles */
+import './header.scss';
 
 const Header = () => {
   const data = useStaticQuery(graphql`
     query {
       site {
         siteMetadata {
-          title
+          title,
+          share {
+            text,
+            hashtags
+          }
         }
       }
     }
   `);
 
+  const logo = require('../images/logo.svg');
+  const shareText = encodeURI(data.site.siteMetadata.share.text);
+  const shareHashtags = encodeURI(data.site.siteMetadata.share.hashtags);
+
   return (
-    <header className={styles.header}>
-      <h1>
-        <Link className={styles.title} to="/">
-          {data.site.siteMetadata.title}
-        </Link>
-      </h1>
-      <nav>
-        <ul className={styles.navList}>
-          <li>
-            <Link
-              className={styles.navItem}
-              activeClassName={styles.activeNavItem}
-              to="/"
-            >
-              Map
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={styles.navItem}
-              activeClassName={styles.activeNavItem}
-              to="/add"
-            >
-              Add Info
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={styles.navItem}
-              activeClassName={styles.activeNavItem}
-              to="/news"
-            >
-              News
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={styles.navItem}
-              activeClassName={styles.activeNavItem}
-              to="/contact"
-            >
-              Contact
-            </Link>
-          </li>
-        </ul>
-      </nav>
+    <header>
+      <div className={'ui unstackable grid'}>
+        <div className={'ui eight wide column logo-column'}>
+          <div
+            className={'header-logo'}
+            style={{
+              backgroundImage: 'url('+ logo +')'
+            }}
+          />
+          <h1 className={'logo-font'}>
+            <span>{data.site.siteMetadata.title}</span>
+          </h1>
+        </div>
+        <div className={'ui eight wide right aligned column'}>
+          <div className={'icon-container'}>
+            <a href={'https://wa.me/?text=' + shareText} target={'_blank'} rel={'noopener noreferrer'}>
+              <i className='ui icon whatsapp' />
+            </a>
+            <a href={'https://www.facebook.com/sharer/sharer.php?u=https://www.whosinberg.org'} target={'_blank'} rel={'noopener noreferrer'}>
+              <i className='ui icon facebook' />
+            </a>
+            <a href={'https://twitter.com/intent/tweet?hashtags=' + shareHashtags +'&text=' + shareText} target={'_blank'} rel={'noopener noreferrer'}>
+              <i className='ui icon twitter' />
+            </a>
+            <a href={"mailto:?body=" + shareText + "&subject=Who'sinberg.org"}>
+              <i className='ui icon envelope' />
+            </a>
+          </div>
+        </div>
+      </div>
     </header>
   );
 };

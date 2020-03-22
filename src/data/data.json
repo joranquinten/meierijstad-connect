@@ -1,0 +1,263 @@
+﻿{
+  "properties": [
+    "category",
+    "title",
+    "description",
+    "contact",
+    "address"
+  ],
+  "geometries": [
+    {
+      "type": "Point",
+      "features": [
+        [
+          [
+            18.4751,
+            -34.1011
+          ],
+          [
+            "petcare",
+            "Dog walkies",
+            "If you can't walk your dogs, we're happy to take them to the Vlei.",
+            "WhatsApp: 0041796308227",
+            "21 Clifton road"
+          ]
+        ],
+        [
+          [
+            18.4749,
+            -34.1013
+          ],
+          [
+            "shop",
+            "Shopping for you",
+            "Happy to go to the supermarket for you to shop for supplies, and deliver to your door.",
+            "Whatsapp: 0041796308227",
+            "21 Clifton road "
+          ]
+        ],
+        [
+          [
+            18.4701,
+            -34.104
+          ],
+          [
+            "shop",
+            "Happy to help shop for those distancing/in quarantine",
+            "Happy to collect basic supplies in the hood and deliver to your door",
+            "nadiasitas@gmail.com",
+            "Arthur Rd"
+          ]
+        ],
+        [
+          [
+            18.4711,
+            -34.1074
+          ],
+          [
+            "medical",
+            "Physiotherapist",
+            "Physio consults continue for pain management support.  Chest physiotherapy to help manage and clear chest infections.",
+            "If flu like symptoms or self isolating, arrange online-sessions only jlw.thestudio@gmail.com . Otherwise book in person sessions via website www.jlwstudio.org ",
+            "52 Beach Road Muizenberg "
+          ]
+        ],
+        [
+          [
+            18.4708,
+            -34.1055
+          ],
+          [
+            "shop",
+            "Help with shoppkng",
+            "I am able to help with shopping after work. I work Monday  Wednesday through to Saturday from 8am to 12mid day",
+            "WhatsApp 0638295101",
+            "5 frankfort Road muizenberg"
+          ]
+        ],
+        [
+          [
+            18.4741,
+            -34.0982
+          ],
+          [
+            "other",
+            "Books to Borrow",
+            "I have boxes and boxes of books if anyone wants to come and borrow some :) ",
+            "Whatsapp 0783709509",
+            "Yarmouth Place, Yarmouth Road"
+          ]
+        ],
+        [
+          [
+            18.466,
+            -34.1014
+          ],
+          [
+            "shop",
+            "Help with shopping",
+            "I am happy to shop and deliver to you if you need this kind of help",
+            "WhatsApp 0846067177",
+            "198a Boyes Drive"
+          ]
+        ],
+        [
+          [
+            18.4699,
+            -34.1055
+          ],
+          [
+            "food",
+            "The Daily Goods Store",
+            "We offer delivery or collections twice a week of all your basic food and pantry staples - organic veg, grain, pulses, nuts, seeds, cleaning products and more...",
+            "Shop Online: www.dailygoodsstore.org\r\nPlace orders via email: trade@dailygoodsstore.org\r\nFind the order list here: https://bit.ly/2xZuGw7\r\nPhone/Whatsapp: 061 113 3100",
+            "29 Palmer Road,\r\nMuizenberg, 7945\r\nCape Town\r\n"
+          ]
+        ],
+        [
+          [
+            18.4765,
+            -34.0823
+          ],
+          [
+            "other",
+            "Education",
+            "I can assist with High school Maths and Life Sciences questions if students need occasional help.",
+            "0731039821\r\nPlease what's app question so I can respond when I am available ",
+            "115 Shearwater Drivery\r\nMarina da Gama "
+          ]
+        ],
+        [
+          [
+            18.4697,
+            -34.1066
+          ],
+          [
+            "takeaway",
+            "Bakery - Sourdough breads",
+            "We offer a range of sourdough breads, baked daily. We also serve take-away coffees and banana and chocolate muffins.\r\n\r\nWe are happy to take orders !",
+            "You can W/a me aka Aisha - 0606975852 or email therealbreadcie@gmail.com",
+            "4 Killarney Road, Muizenberg, 7945"
+          ]
+        ],
+        [
+          [
+            18.4684,
+            -34.1071
+          ],
+          [
+            "shop",
+            "Shop & chat via phone about life/covid",
+            "Staying in Cinnabar. Available to shop, check up on people, chat over phone/skype about whatever is on your mind including any questions/worries regarding the virus. ",
+            "Whatsapp\r\n083 938 8102",
+            "4 Atlantic Road"
+          ]
+        ],
+        [
+          [
+            18.482,
+            -34.1014
+          ],
+          [
+            "food",
+            "Meals and shopping delivered to your door ",
+            "I will deliver home cooked meals to your door. Shop for you too",
+            "0723487223 or rochellepascucci@gmail.com",
+            "15 Prince George drive Muizenberg "
+          ]
+        ],
+        [
+          [
+            18.4734,
+            -34.1039
+          ],
+          [
+            "petcare",
+            "Dog walk/run",
+            "Happy to take your dog for a walk or run if you’re not able to.",
+            "Whatsapp: 0713922718",
+            "12 Maynard Road"
+          ]
+        ],
+        [
+          [
+            18.4718,
+            -34.1031
+          ],
+          [
+            "petcare",
+            "As Nature Intended: Give a Dog a Bone and Cat of the Day Cat Food",
+            "We make healthy registered raw cat and dog food, including a number of special recipes for dogs or cats with specific illnesses.  We also stock treats, hygiene products and supplements for pets. We do deliveries, and offer no contact deliveries if needed.  If any of our community is suffering financial hardship due to enforced isolation we will waive our delivery fees.  Please also support our initiative to help animal welfares. We support a number of animal welfare groups as far as is possible for a small business.  In addition to our regular donations, we will add an extra kg of food to every 1kg of our food that you buy to donate to animal welfare  (ie we will match your donation).  We also arrange delivery to these organisations where needed.",
+            "Whatsapp +27822683162\r\ne-mail chris@giveadogabone.co.za\r\nLandline: 021 788 7186",
+            "8 Albertyn Rd\r\nMuizenberg\r\n(Cnr Clevedon Rd - entrance in Clevedon)"
+          ]
+        ],
+        [
+          [
+            18.4795,
+            -34.0928
+          ],
+          [
+            "takeaway",
+            "Dr Phil-afel ",
+            "Plant powered comfort foods :) legendary vegan burgers, paprika lemon fries, pastas,  meat alternatives (seitan), whole grains, frozen organic citrus juice, ",
+            "WhatsApp  : 0748315961, 0716748311\r\nCall: 0748315961, 0680246744",
+            "Eastlake Centre, Eastlake drive, Marina Da gama. "
+          ]
+        ],
+        [
+          [
+            18.4787,
+            -34.0936
+          ],
+          [
+            "petcare",
+            "Dog walking",
+            "Happy to walk dogs in the Uitsig Peninsula area for those people still at an office or self isolating. Dogs must have collars with contact numbers and good on leads ",
+            "Whatsapp 082 475 6187",
+            "7 Coot Drive Uitsig Peninsula Marina da Gama 7945"
+          ]
+        ],
+        [
+          [
+            18.4678,
+            -34.1059
+          ],
+          [
+            "childcare",
+            "Kids kingdom Childcare",
+            "Safe, clean, sanitized childcare. ",
+            "0832862393\r\n\r\nKidskingdom@live.co.za ",
+            "94 main road Muizenberg "
+          ]
+        ],
+        [
+          [
+            18.4698,
+            -34.1055
+          ],
+          [
+            "takeaway",
+            "JOON - take away meals ",
+            "We have delicious frozen meals and pizzas on offer for take away.\r\nYou're welcome to collect or we can deliver in the Muizenberg area.",
+            "Email: orderatjoon@gmail.com\r\nPhone: 0833368305\r\nFacebook: https://www.facebook.com/jooncatering/ ",
+            "40 Palmer Road, Muizenberg Village "
+          ]
+        ],
+        [
+          [
+            18.4703,
+            -34.104
+          ],
+          [
+            "petcare",
+            "Happy walk pets",
+            "Happy to walk your pets if you are not able to",
+            "nadiasitas@gmail.com",
+            "2 Arthur Rd"
+          ]
+        ]
+      ]
+    }
+  ]
+}
