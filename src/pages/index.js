@@ -42,7 +42,7 @@ const Index = () => {
           </div>
         </section>
         <section>
-          <MapViewComponent />
+          {/*<MapViewComponent />*/}
         </section>
         <section className='ui vertical segment intro'>
           <div className='ui text container formcontainer'>

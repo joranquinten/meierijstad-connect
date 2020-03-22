@@ -8,8 +8,10 @@ export function MapViewComponent() {
 	const [selectedCategories, setSelectedCategories] = useState([])
 
 	useEffect(() => {
+		// eslint-disable-next-line
 		if (map) {
 			if (selectedCategories.length === 0) {
+				// eslint-disable-next-line
 				map.setFilter('data', undefined)
 			} else {
 				const filter = ['any']
