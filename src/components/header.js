@@ -26,7 +26,7 @@ const Header = () => {
   return (
     <header>
       <div className={'ui unstackable grid'}>
-        <div className={'ui eight wide column logo-column'}>
+        <div className={'ui twelve wide column logo-column'}>
           <div
             className={'header-logo'}
             style={{
@@ -37,7 +37,7 @@ const Header = () => {
             <span>{data.site.siteMetadata.title}</span>
           </h1>
         </div>
-        <div className={'ui eight wide right aligned column'}>
+        <div className={'ui four wide right aligned column'} style={{padding: '.8rem 1.4rem 0 0'}}>
           <div className={'icon-container'}>
             <a href={'https://wa.me/?text=' + shareText} target={'_blank'} rel={'noopener noreferrer'}>
               <i className='ui icon whatsapp' />
