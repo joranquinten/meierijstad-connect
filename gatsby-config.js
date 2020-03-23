@@ -46,6 +46,25 @@ module.exports = {
           databaseURL: process.env.FIREBASE_URL
         }
       }
+    },
+    {
+      resolve: `gatsby-source-firebase`,
+      options: {
+        // point to the firebase private key downloaded
+        credential: require('./secret/firebase-creds'),
+
+        // your firebase database root url
+        databaseURL: process.env.FIREBASE_URL,
+
+        // you can have multiple "types" that point to different paths
+        types: [
+          // if you're data is really simple, this should be fine too
+          {
+            type: "MapPoints",
+            path: "data/",
+          }
+        ]
+      }
     }
   ],
 };

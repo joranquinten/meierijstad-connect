@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import mapboxgl from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import { useStaticQuery, graphql } from 'gatsby';
-import brok from 'brokjson'
+import JSONtoGeoJSON from './jsonToGeoJson'
 import masked  from '../../../data/reverse_cpt_boundaries'
 import { InteractionToggle } from './interactionToggle.js'
 import Popup from '../popup'
@@ -28,8 +28,25 @@ const bounds = [
 function AnimatedMap(props) {
   const [mapObject, setMapObject] = useState(null)
 
+  /* We query all the firebase data here */
+
   const data = useStaticQuery(graphql`
     query {
+      allMapPoints(filter: {approved: {eq: true}}) {
+        nodes {
+          approved,
+          address,
+          category,
+          contact,
+          description,
+          email,
+          id,
+          name,
+          phone,
+          position,
+          title
+        }
+      }
       site {
         siteMetadata {
           title,
@@ -44,6 +61,8 @@ function AnimatedMap(props) {
       }
     }
   `);
+
+  const MapPoints = JSONtoGeoJSON(data.allMapPoints);
 
   const setInteractivity = enabled => {
     if (!mapObject) return
@@ -150,8 +169,8 @@ function AnimatedMap(props) {
 
       map.addSource('data', {
         type: 'geojson',
-        data: brok.brok2geo(require('../../../data/data.json'))
-      })
+        data: MapPoints
+      });
 
       const colorDividor = ['match', ['get', 'category']]
       for (const i in categories) {

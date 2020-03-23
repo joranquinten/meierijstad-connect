@@ -45,7 +45,8 @@ export function MapAddComponent() {
     phone: '',
     email: '',
     name: '',
-    timestamp: Date.now()
+    timestamp: Date.now(),
+    approved: false
   })
 
   const onChange = e => {
