@@ -17,6 +17,11 @@ module.exports = {
       text: 'This is the share text, follow @xyz and #abc',
       hashtags: 'WhosInBerg,Coronavirus,StayTheFuckHome' // separate with commas,
     },
+    menuLinks: [
+      {title: 'Home', link: '/', icon: 'map'},
+      {title: 'Add information', link: '/add', icon: 'plus'},
+      {title: 'Contact', link: '/contact', icon: 'info'},
+    ],
     mapData: {
       bounds: [
         [18.459692001342773,-34.08692882376707],

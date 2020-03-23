@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Header from './header';
+import Navbar from './navbar';
 import Footer from './footer';
 
 /* Loading Semantic UI Style Sheets */
@@ -27,6 +28,7 @@ const Layout = ({ children }) => {
   return (
     <div id={'app'}>
       <Header />
+      <Navbar />
       <main>{children}</main>
       <Footer />
     </div>
