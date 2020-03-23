@@ -1,33 +1,47 @@
 <p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
+  <a href="https://www.whozinberg.org">
+    <img alt="Whozinberg.org" src="http://www.whozinberg.org/favicon.png" width="60" />
   </a>
 </p>
 <h1 align="center">
-  Gatsby Starter: Community Isolation Map
+  Open Source "Community Isolation Map"
 </h1>
 
-Kick off your project with this blog boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+This project was built to bring communities closer together in these extraordinary, isolated times. Please fork the project and create a community isolation map for your own neighbourhood.
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
+_If you have any questions about how to set up the project – or any feedback – please let me know: marc.fehr@gmail.com_
 
 ## 🚀 Quick start
 
+0.  **Fork or clone your own project from this repository**
+
 1.  **Create a Gatsby site.**
 
-    Use the Gatsby CLI to create a new site, specifying the blog starter.
+    This site was built with GatsbyJS, a static site generator working with the React Framwork. For more about GatsbyJS, go to https://www.gatsbyjs.org/. The documentation is here: https://www.gatsbyjs.org/docs/
 
     ```shell
-    # create a new Gatsby site using the blog starter
-    gatsby new my-blog-starter https://github.com/SafdarJamal/gatsby-bootcamp-blog
+    # open the project folder in your terminal
+    cd ~/project-name
+
+    # I suggest to install the Node Version Manager (nvm), first: https://github.com/nvm-sh/nvm
+    # ... if you have nvm installed, run
+    nvm use
+
+    # If you don't want to work with NVM, make sure your local Node version works with the dependencies
+
+    # then run either
+    yarn install
+
+    #or
+    npm install
     ```
 
 1.  **Start developing.**
 
-    Navigate into your new site’s directory and start it up.
+    To launch the site, navigate into your new site’s directory and start it up.
 
     ```shell
-    cd my-blog-starter/
+    cd ~/project-name/
     gatsby develop
     ```
 
@@ -37,7 +51,7 @@ _Have another more specific idea? You may want to check out our vibrant collecti
 
     _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
 
-    Open the `my-blog-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+    Open the `my-project` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
 
 ## 🧐 What's inside?
 
@@ -48,12 +62,11 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
     ├── src
     ├── .gitignore
     ├── .prettierrc
-    ├── gatsby-browser.js
     ├── gatsby-config.js
     ├── gatsby-node.js
-    ├── gatsby-ssr.js
     ├── LICENSE
-    ├── package-lock.json
+    ├── yarn.lock
+    ├── yarn-error.log
     ├── package.json
     └── README.md
 
@@ -65,21 +78,21 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 
 4.  **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
 
-5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.org/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
+5.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.org/docs/gatsby-config/) for more detail).
 
-6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.org/docs/gatsby-config/) for more detail).
+6.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.org/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
 
-7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.org/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
+7.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.org/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
 
-8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.org/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
+8.  **`LICENSE`**: Gatsby is licensed under the MIT license.
 
-9.  **`LICENSE`**: Gatsby is licensed under the MIT license.
+9. **`yarn.lock`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
 
-10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
+10. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
 
-11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
+11. **`README.md`**: A text file containing useful reference information about your project.
 
-12. **`README.md`**: A text file containing useful reference information about your project.
+12. **`.nvmrc`**: Contains the Node Version manager variable 13.11.0 (this is what the projet was built on)
 
 ## 🎓 Learning Gatsby
 
@@ -91,4 +104,4 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 
 ## 💫 Deploy
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/SafdarJamal/gatsby-bootcamp-blog)
+The original project (https://www.whozinberg.org) was deployed through https://www.netlify.com. Host your own repository on Gitlab or Github, sign up n Netlify.com and start deploying your GatsbyJS project.
