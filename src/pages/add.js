@@ -1,22 +1,11 @@
 import React from 'react';
-import {graphql, Link, useStaticQuery} from 'gatsby'
+import { Link } from 'gatsby'
 /* SEO Component with React Helmet */
 import Head from '../components/head'
 import Layout from '../components/layout'
 import { MapAddComponent } from '../components/mapview.add'
 
 const Add = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          title,
-          email
-        }
-      }
-    }
-  `);
-
   return (
     <Layout>
       <Head title={`Add`} />

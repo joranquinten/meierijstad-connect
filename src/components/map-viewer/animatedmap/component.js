@@ -12,7 +12,10 @@ import { ActivationButton } from './activationButton.js'
 
 import './style.scss'
 
-const mapStyle = require('./style.json')
+/* Important: Add your own Mapbox key to your .env vars: */
+const mapStyle = require('../../../data/map-styles.js');
+
+/* Set your own boundaries with either a rectangle or any other geoJson information in the data dir */
 
 /*
 Go to gatsby-config.js in main dir to change bounds

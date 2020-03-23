@@ -4,10 +4,11 @@ import mapboxgl from 'mapbox-gl'
 import { useStaticQuery, graphql } from 'gatsby';
 import 'mapbox-gl/dist/mapbox-gl.css'
 
-// Data
+/* Set your own boundaries with either a rectangle or any other geoJson information in the data dir */
 import masked  from '../../../data/reverse_cpt_boundaries'
 
-const mapStyle = require('./style.json')
+/* Important: Add your own Mapbox key to your .env vars: */
+const mapStyle = require('../../../data/map-styles.js');
 
 /* Go to gatsby-config.js to change bounds
 const bounds = [

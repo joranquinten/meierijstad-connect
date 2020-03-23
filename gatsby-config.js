@@ -34,5 +34,13 @@ module.exports = {
         trackingId: "UA-161488686-1",
       },
     },
+    {
+      resolve: "gatsby-plugin-firebase",
+      options: {
+        credentials: {
+          databaseURL: process.env.FIREBASE_URL
+        }
+      }
+    }
   ],
 };

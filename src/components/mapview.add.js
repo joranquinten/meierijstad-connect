@@ -3,27 +3,13 @@ import './mapview.add.scss'
 import AnimatedMap from './map-add/animatedmap/component.js'
 import categories from '../components/categories'
 import { useStaticQuery, graphql, Link } from 'gatsby';
+import firebase from "gatsby-plugin-firebase";
+
 const scrollToElement = require('scroll-to-element');
-
-const firebase = require('firebase/app');
-require('firebase/database');
-
-// Set this var in your local .env.development filr in main dir
-// ... and also on Netlify as an .env var
-// .. to keep this firebase URL secret:
-const config = {
-  databaseURL: process.env.FIREBASE_URL
-};
 
 /*
 See gatsby-config.js in main dir for bounds
-const bounds = [
-  [18.459692001342773,-34.08692882376707],
-  [18.512563705444336,-34.1109517943943]
-];
  */
-
-firebase.initializeApp(config);
 
 export function MapAddComponent() {
 
@@ -44,7 +30,6 @@ export function MapAddComponent() {
     }
   `);
 
-  // document.querySelector('.checkbox').checkbox()
   const [mapActive, setMapActive] = useState(false);
   const [map, setMap] = useState(null);
   const [positionSelected, setPositionSelected] = useState(false);
