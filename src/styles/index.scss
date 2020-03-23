@@ -8,6 +8,10 @@ html {
   // The ID "app" is part of the HTML template, and is the entry point where
   // the React components are being injected into.
 
+  .ui.image.header {
+    margin-top: 1rem;
+  }
+
   strong {
     border-bottom: 4px solid rgba(255, 221, 0, 0.6);
     color: #000 !important;
@@ -20,6 +24,7 @@ html {
     display: block;
     @media screen and (min-width: 820px) {
       font-size: 2em;
+      margin-top: 0;
     }
   }
 

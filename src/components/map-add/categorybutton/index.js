@@ -1,5 +1,4 @@
 import React from 'react'
-import './styles.scss'
 import categories from '../../../components/categories'
 
 function CategoryButtons(props) {
@@ -8,14 +7,7 @@ function CategoryButtons(props) {
   }
 
   return (
-    <div className='categories'>
-      <Button
-        onClick={clicked}
-        ident='all'
-        selected={props.selected.length === 0 ? ['all'] : props.selected}
-      >
-        Everything
-      </Button>
+    <div className='ui buttons category'>
       {categories.map(item => (
         <Button
           onClick={clicked}
@@ -33,9 +25,9 @@ function CategoryButtons(props) {
 function Button(props) {
   return (
     <button
-      className={`ui basic ${props.ident} ${
-        props.selected.includes(props.ident) ? 'selected' : ''
-      } small button`}
+      className={`ui button ${
+        props.selected === props.ident ? 'positive' : ''
+      }`}
       onClick={() => props.onClick(props.ident)}
     >
       {props.children}

@@ -16,7 +16,13 @@ module.exports = {
     share: {
       text: 'This is the share text, follow @xyz and #abc',
       hashtags: 'WhosInBerg,Coronavirus,StayTheFuckHome' // separate with commas,
-    }
+    },
+    mapData: {
+      bounds: [
+        [18.459692001342773,-34.08692882376707],
+        [18.512563705444336,-34.1109517943943]
+      ]
+    },
   },
   plugins: [
     'gatsby-plugin-react-helmet',

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import Categories from "./map-viewer/categories";
+import Categories from "./map-viewer/categorybuttons";
 import AnimatedMap from "./map-viewer/animatedmap/component";
 
 export function MapViewComponent() {
@@ -8,7 +8,6 @@ export function MapViewComponent() {
 	const [selectedCategories, setSelectedCategories] = useState([])
 
 	useEffect(() => {
-		// eslint-disable-next-line
 		if (map) {
 			if (selectedCategories.length === 0) {
 				// eslint-disable-next-line

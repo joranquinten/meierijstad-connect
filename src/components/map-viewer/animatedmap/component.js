@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import ReactDOM from 'react-dom'
 import mapboxgl from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
+import { useStaticQuery, graphql } from 'gatsby';
 import brok from 'brokjson'
 import masked  from '../../../data/reverse_cpt_boundaries'
 import { InteractionToggle } from './interactionToggle.js'
@@ -13,13 +14,33 @@ import './style.scss'
 
 const mapStyle = require('./style.json')
 
+/*
+Go to gatsby-config.js in main dir to change bounds
 const bounds = [
   [18.459692001342773,-34.08692882376707],
   [18.512563705444336,-34.1109517943943]
 ]
+ */
 
 function AnimatedMap(props) {
   const [mapObject, setMapObject] = useState(null)
+
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          title,
+          share {
+            text,
+            hashtags
+          }
+          mapData {
+            bounds
+          }
+        }
+      }
+    }
+  `);
 
   const setInteractivity = enabled => {
     if (!mapObject) return
@@ -51,7 +72,7 @@ function AnimatedMap(props) {
       minZoom: 4,
       maxZoom: 18,
       interactive: true,
-      bounds: bounds,
+      bounds: data.site.siteMetadata.mapData.bounds,
     })
 
     // Return map object
@@ -173,7 +194,7 @@ function AnimatedMap(props) {
 
       // Fit Map
       map.fitBounds(
-        bounds,
+        data.site.siteMetadata.mapData.bounds,
         { duration: 700 }
       )
 

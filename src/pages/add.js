@@ -1,18 +1,55 @@
 import React from 'react';
-import { Link } from 'gatsby';
-
-import Layout from '../components/layout';
-import Head from '../components/head';
+import {graphql, Link, useStaticQuery} from 'gatsby'
+/* SEO Component with React Helmet */
+import Head from '../components/head'
+import Layout from '../components/layout'
+import { MapAddComponent } from '../components/mapview.add'
 
 const Add = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          title,
+          email
+        }
+      }
+    }
+  `);
+
   return (
     <Layout>
-      <Head title="Add" />
-      <h1>Add</h1>
-      <p>I'm currently working on passion projects.</p>
-      <p>
-        <Link to="/contact">Want to work with me? Reach out.</Link>
-      </p>
+      <Head title={`Add`} />
+      <div className='index'>
+        <section className='ui vertical very fitted segment'>
+          <div className='ui container'>
+            <h1 className='ui image header'>
+              <div className='content'>
+              <span className='page-title'>
+                You've got some useful information to share?
+              </span>
+                <div className='sub header'>
+                  While shops and restaurants are closing, people get more and more isolated. Stay safe, help where you can and keep your mental hygiene up. Thanks for sharing your information in the interactive map below.
+                </div>
+              </div>
+            </h1>
+          </div>
+        </section>
+
+        <section className='ui vertical segment'>
+          <div className='ui text container formcontainer'>
+            <h2>This is how it works</h2>
+            Choose a place on the map where you want the information to appear. You'll be asked to provide us with information about your entry before you can send it off. <strong>We are going to check all entries manually</strong>. Once your entry is approvoved, you'll see it{' '}
+            <Link to='/'>
+              here
+            </Link>.
+          </div>
+        </section>
+        <section>
+          <MapAddComponent />
+        </section>
+
+      </div>
     </Layout>
   );
 };

@@ -1,0 +1,87 @@
+#map-add-component {
+  // prevents "swimming" layout on mobile
+  overflow: hidden;
+
+  strong {
+    border-bottom: 4px solid rgba(255, 221, 0, 0.6);
+    color: #000 !important;
+  }
+
+  h2 {
+    font-size: 1.5em;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .page-title {
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    line-height: 0.9;
+    display: block;
+  }
+
+  .feedback-message {
+    display: none;
+  }
+
+  .formcontainer {
+    p {
+      color: grey;
+      font-size: 0.9em;
+    }
+
+    h3 {
+      font-size: 1.5em;
+    }
+
+    h4 {
+      padding-top: 40px;
+    }
+  }
+
+  .category {
+    display: inline-block !important;
+  }
+
+  .box {
+    width: 100%;
+    padding: 2em;
+    z-index: 9999;
+    display: block;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 3px;
+    -webkit-box-shadow: 0px 0px 15px -2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 15px -2px rgba(0, 0, 0, 0.2);
+
+    @media only screen and (max-width: 599px) {
+      padding: 1.5em;
+    }
+    @media only screen and (min-width: 599px) {
+      max-width: 550px;
+    }
+  }
+
+  #mapcontainer {
+    position: relative;
+
+    h3 {
+      font-size: 1.4em;
+      padding: 0 0 10px;
+    }
+
+    #overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    #selectThisPoint {
+      position: absolute;
+      top: -2rem;
+      left: 50%;
+      height: auto;
+      z-index: 9999;
+      transform: translateX(-50%);
+    }
+  }
+}
