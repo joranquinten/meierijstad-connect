@@ -27,8 +27,6 @@ const Head = ({ title }) => {
         { name: 'og:image:type', content: "image/jpeg"},
         { name: 'og:image:alt', content: "Whozinberg.org Teaser Image with photo taken from above." },
       ]}
-    >
-      <link rel="canonical" href="https://www.whozinberg.org" />
     />
   );
 };
