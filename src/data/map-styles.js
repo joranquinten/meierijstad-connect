@@ -1,3 +1,5 @@
+/* Important: Change all YOURMAPBOXKEYHERE to your own Mapbox Key. Get one here: https://docs.mapbox.com/help/how-mapbox-works/access-tokens/ */
+
 module.exports = {
   "version": 8,
   "name": "Basic",
@@ -12,10 +14,10 @@ module.exports = {
   "sources": {
     "openmaptiles": {
       "type": "vector",
-      "url": "https://api.maptiler.com/tiles/v3/tiles.json?key=" + process.env.MAPBOX_KEY + "#"
+      "url": "https://api.maptiler.com/tiles/v3/tiles.json?key=YOURMAPBOXKEYHERE#"
     }
   },
-  "glyphs": "https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key=" + process.env.MAPBOX_KEY,
+  "glyphs": "https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key=YOURMAPBOXKEYHERE",
   "layers": [
     {
       "id": "background",
