@@ -1,4 +1,5 @@
 /* Important: Change all YOURMAPBOXKEYHERE to your own Mapbox Key. Get one here: https://docs.mapbox.com/help/how-mapbox-works/access-tokens/ */
+/* FOR LOCAL USE you can define .env.development in your main folder and in there set MAPBOX_KEY=xyz */
 
 module.exports = {
   "version": 8,
@@ -14,10 +15,10 @@ module.exports = {
   "sources": {
     "openmaptiles": {
       "type": "vector",
-      "url": "https://api.maptiler.com/tiles/v3/tiles.json?key=YOURMAPBOXKEYHERE#"
+      "url": "https://api.maptiler.com/tiles/v3/tiles.json?key=" + process.env.MAPBOX_KEY || 'YOURMAPBOXKEYHERE' + "#"
     }
   },
-  "glyphs": "https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key=YOURMAPBOXKEYHERE",
+  "glyphs": "https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key=" + process.env.MAPBOX_KEY || 'YOURMAPBOXKEYHERE',
   "layers": [
     {
       "id": "background",
