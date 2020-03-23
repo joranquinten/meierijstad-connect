@@ -9,6 +9,7 @@ module.exports = {
     description:
       'This is the open source project for building your own community map.',
     email: 'mail@xyz.com',
+    teaserImage: "https://www.whozinberg.org/teaser.jpg",
     twitter: {
       hashtag: 'yourHashtag',
       handle: 'yourTwitterHandle'
