@@ -22,8 +22,8 @@ const Navbar = () => {
       }
 	`);
 
-	const MenuLinks = data.site.siteMetadata.menuLinks.map(el => (
-		<li><Link activeClassName={'active'} className={'ui small basic black icon button'} to={el.link}><i className={`icon ${el.icon}`} />{' '}{el.title}</Link></li>
+	const MenuLinks = data.site.siteMetadata.menuLinks.map((el,i) => (
+		<li key={`navbar-link-${i}`}><Link activeClassName={'active'} className={'ui small basic black icon button'} to={el.link}><i className={`icon ${el.icon}`} />{' '}{el.title}</Link></li>
 	))
 
 	return (
