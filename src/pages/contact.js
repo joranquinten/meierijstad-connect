@@ -2,7 +2,6 @@ import React from 'react';
 
 import Layout from '../components/layout';
 import Head from '../components/head';
-import {Link} from "gatsby";
 
 const Contact = () => {
   return (
@@ -32,7 +31,7 @@ const Contact = () => {
               <a href='mailto:marc.fehr@gmail.com'>
                 Marc Fehr
               </a>, developer and maintainer of{' '}
-              <a href={'https://www.whozinberg.org'} target={'_blank'}>
+              <a href={'https://www.whozinberg.org'} target={'_blank'} rel={'noopener noreferrer'}>
                 whozinberg.org
               </a>
             </li>

@@ -19,7 +19,7 @@ module.exports = {
     },
     menuLinks: [
       {title: 'Home', link: '/', icon: 'map'},
-      {title: 'Add information', link: '/add', icon: 'plus'},
+      {title: 'Add', link: '/add', icon: 'plus'},
       {title: 'Contact', link: '/contact', icon: 'info'},
     ],
     mapData: {
