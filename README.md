@@ -7,20 +7,19 @@
   Open Source "Community Isolation Map"
 </h1>
 
-## 📚 Check out the demo
+## 👓Check out the demo
 ⛱ [Who'zinberg.org
 ](https://www.whozinberg.org "The Muizenberg Community Map")
 
-## 📚 Read the tutorial
+## 📚Read the tutorial
 [How to build a fast and reliable community mapping tool with GatsbyJS and Firebase
 ](https://medium.com/@marcfehr/how-to-build-a-fast-and-reliable-community-mapping-tool-with-gatsbyjs-and-firebase-74a0fa6b5b83 "Article on Medium")
-
 
 This project was built to bring communities closer together in these extraordinary, isolated times. Please fork the project and create a community isolation map for your own neighbourhood.
 
 _If you have any questions about how to set up the project – or any feedback – please let me know: marc.fehr@gmail.com_
 
-## 🚀 Quick start
+## 🚀Quick start
 
 0.  **Fork or clone your own project from this repository**
 
