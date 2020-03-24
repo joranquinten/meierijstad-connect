@@ -1,0 +1,20 @@
+{
+  "data": {
+    "-M2svAwqc8sXktcvZ2eA": {
+      "address": "33 XYZ road",
+      "category": "petcare",
+      "contact": "WhatsApp: 0034 234 82 30",
+      "description": "If you can't walk your dogs, we're happy to take them to the Vlei.",
+      "email": "petwalker77@dog.love",
+      "name": "Walter and Pete",
+      "phone": "028 373 29 28",
+      "position": [
+        18.47511159513263,
+        -34.10107243407645
+      ],
+      "timestamp": 1584724150609,
+      "title": "Dog walkies",
+      "approved": true
+    }
+  }
+}
