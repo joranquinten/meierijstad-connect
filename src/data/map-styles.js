@@ -1,5 +1,4 @@
-/* Important: Change THE MAPBOX KEY (the one for Whozinberg.org is in now, it's sejRzrAFFIRh75t6tsm8) to YOUR OWN Mapbox Key. Get one here: https://docs.mapbox.com/help/how-mapbox-works/access-tokens/ */
-/* FOR LOCAL USE you can define .env.development in your main folder and in there set MAPBOX_KEY=xyz */
+/* Important: Change THE MAPTILER KEY (the one for Whozinberg.org is in now, it's sejRzrAFFIRh75t6tsm8) to YOUR OWN Maptiler Key. Get one here: https://www.maptiler.com/google-maps-platform-alternative/ */
 
 module.exports = {
   "version": 8,
