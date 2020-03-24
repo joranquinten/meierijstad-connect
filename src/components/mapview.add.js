@@ -157,13 +157,13 @@ export function MapAddComponent() {
                   setContent({ ...content, position: [] })
                 }}
               >
-                No, choose again
+                No, choose again...
               </button>
               <button
                 className='ui positive button'
                 onClick={() => setPositionSelected(true)}
               >
-                Yes, that's it
+                Yes!
               </button>
             </div>
           </div>
