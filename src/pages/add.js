@@ -10,9 +10,9 @@ const Add = () => {
     <Layout>
       <Head title={`Add`} />
       <div className='index'>
-        <section className='ui vertical very fitted segment'>
+        <section className='ui vertical very fitted segment' style={{marginTop: '1rem'}}>
           <div className='ui container'>
-            <h1 className='ui image header'>
+            <h1 className='ui header'>
               <div className='content'>
               <span className='page-title'>
                 You've got some useful information to share?

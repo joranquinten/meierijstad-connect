@@ -7,9 +7,9 @@ const Contact = () => {
   return (
     <Layout>
       <Head title={`Contact`} />
-      <section className='ui vertical very fitted segment'>
+      <section className='ui vertical very fitted segment' style={{marginTop: '1rem'}}>
         <div className='ui container'>
-          <h1 className='ui image header'>
+          <h1 className='ui header'>
             <div className='content'>
             <span className='page-title'>
               Get in touch now.
@@ -19,6 +19,9 @@ const Contact = () => {
               </div>
             </div>
           </h1>
+          <div className={'ui yellow message'} style={{fontWeight: 500, fontStyle: 'italic'}}>
+            <i className={'icon external link'} />Read the Tutorial about how to set up your own map <a href={'https://medium.com/@marcfehr/how-to-build-a-fast-and-reliable-community-mapping-tool-with-gatsbyjs-and-firebase-74a0fa6b5b83?source=userActivityShare-f57d26da4972-1584988662&_branch_match_id=689400773593121406'} target={'_blank'} rel={'noopener noreferrer'}>here</a>.
+          </div>
         </div>
       </section>
 
