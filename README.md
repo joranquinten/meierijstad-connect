@@ -7,6 +7,10 @@
   Open Source "Community Isolation Map"
 </h1>
 
+## 📚 Check out the demo
+⛱ [Who'zinberg.org
+](https://www.whozinberg.org "The Muizenberg Community Map")
+
 ## 📚 Read the tutorial
 [How to build a fast and reliable community mapping tool with GatsbyJS and Firebase
 ](https://medium.com/@marcfehr/how-to-build-a-fast-and-reliable-community-mapping-tool-with-gatsbyjs-and-firebase-74a0fa6b5b83 "Article on Medium")
