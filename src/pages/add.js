@@ -15,7 +15,7 @@ const Add = () => {
             <h1 className='ui header'>
               <div className='content'>
               <span className='page-title'>
-                You've got some useful information to share?
+                You've got some useful information to share? Test.
               </span>
                 <div className='sub header'>
                   While shops and restaurants are closing, people get more and more isolated. Stay safe, help where you can and keep your mental hygiene up. Thanks for sharing your information in the interactive map below.
