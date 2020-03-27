@@ -26,7 +26,7 @@ export function MapViewComponent() {
 		<div id={'map-view'}>
 			<div className='ui container'>
 				<div className='mapform'>
-					<h2>Filter by categories</h2>
+					<h2>Filter op categorie</h2>
 					<Categories
 						selected={selectedCategories}
 						onClick={c => {

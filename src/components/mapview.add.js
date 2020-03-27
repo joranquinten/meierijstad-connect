@@ -133,23 +133,23 @@ export function MapAddComponent() {
         <AnimatedMap getMapObject={m => setMap(m)} enabled={mapActive} />
         {!mapActive && (
           <div id='overlay' className='box'>
-            <h3>Add new information</h3>
+            <h3>Informatie toevoegen</h3>
             <p>
-              Choose a position on the map within the community boundaries to become part of Who'zinberg.
+              Kies de positie op de kaart om deel te nemen aan MeierijstadConnect.
             </p>
             <button
               className='ui primary button'
               onClick={() => setMapActive(true)}
             >
-              Activate map and add service
+              Activeer kaart en voeg service toe
             </button>
           </div>
         )}
 
         {content.position.length > 0 && (
           <div id='selectThisPoint' className='box'>
-            <h3>You set a position</h3>
-            <p>Do you want to use it?</p>
+            <h3>Je hebt een positie gekozen</h3>
+            <p>Kunnen we deze gebruiken?</p>
             <div className='ui buttons'>
               <button
                 className='ui button'
@@ -157,13 +157,13 @@ export function MapAddComponent() {
                   setContent({ ...content, position: [] })
                 }}
               >
-                No, choose again...
+                Nee, laat me opnieuw kiezen...
               </button>
               <button
                 className='ui positive button'
                 onClick={() => setPositionSelected(true)}
               >
-                Yes!
+                Ja!
               </button>
             </div>
           </div>
@@ -181,18 +181,18 @@ export function MapAddComponent() {
               }}
             >
               <i className='left arrow icon' />
-              Change location
+              Verander locatie
             </button>
             <div className='ui form'>
               <h4 className='ui horizontal divider header'>
-                About your service (public)
+                Over je service (publieke informatie)
               </h4>
               <p>
-                Please answer the following questions. This data will be displayed on the map. At the moment, it's only possible to choose <strong>one category</strong> per point. If you have more than one information, you'll have to add every single one to the map.
+                Vul onderstaande vragen zo goed mogelijk in. Dit wordt weergegeven op de kaart. Momenteel is het mogelijk om <strong>een categorie</strong> per punt te kiezen. Wanneer je meerdere diensten aan wilt bieden, kun je meerdere punten aanmaken op de kaart.
               </p>
 
               <div className='field'>
-                <label>Service category</label>
+                <label>Service categorie</label>
                 <select
                   value={content.category}
                   className='ui dropdown'
@@ -215,84 +215,84 @@ export function MapAddComponent() {
               </div>
 
               <div className='field required'>
-                <label>Title of your information</label>
+                <label>Titel</label>
                 <input
                   type='text'
                   name='title'
                   value={content.title}
                   onChange={onChange}
-                  placeholder='Help with shopping / Have hand sanitiser / what else?'
+                  placeholder='Ik help met boodschappen / Ik heb toiletpapier over / anders?'
                 />
               </div>
 
               <div className='field required'>
-                <label>That's what you offer</label>
+                <label>Wat bied je aan?</label>
                 <textarea
                   rows={4}
                   name='description'
                   onChange={onChange}
-                  placeholder='Write a short text that describes your service or information.'
+                  placeholder='Schrijf een korte tekst die omschrijft welke dienst of informatie je aanbiedt.'
                   defaultValue={content.description}
                 />
               </div>
 
               <div className='field required'>
-                <label>How to get in touch</label>
+                <label>Hoe komen we in contact?</label>
                 <textarea
                   rows={4}
                   name='contact'
-                  placeholder='This is what people will see. Example: Whatsapp: 012 234 23 23, Email: xyz@abc.co.za'
+                  placeholder='Dit is publieke informatie, bijvoorbeeld: Whatsapp: 012 234 23 23, Email: xyz@abc.nl'
                   defaultValue={content.contact}
                   onChange={onChange}
                 />
               </div>
 
               <div className='field required'>
-                <label>Your physical (postal) address</label>
+                <label>Wat is je (post) adres?</label>
                 <textarea
                   rows={4}
                   name='address'
-                  placeholder='123 Main road, Muizenberg. We need this to confirm your locaction on the map.'
+                  placeholder='Hoofdstraat 1, Meierijstad. Dit gebruiken we om de aangegeven locatie te bevestigen.'
                   defaultValue={content.address}
                   onChange={onChange}
                 />
               </div>
 
               <h4 className='ui horizontal divider header'>
-                Additional information
+                Extra informatie
               </h4>
               <p>
-                This information will not be published to the website.
+                Dit wordt niet op de website gepubliceerd.
               </p>
 
               <div className='field required'>
-                <label>Your name</label>
+                <label>Je naam</label>
                 <input
                   type='text'
                   name='name'
-                  placeholder='James Smith'
+                  placeholder='Jan de Vries'
                   defaultValue={content.name}
                   onChange={onChange}
                 />
               </div>
 
               <div className='field required'>
-                <label>Your email address</label>
+                <label>Je emailadres</label>
                 <input
                   type='text'
                   name='email'
-                  placeholder='james@smith.com'
+                  placeholder='ik@domein.nl'
                   defaultValue={content.email}
                   onChange={onChange}
                 />
               </div>
 
               <div className='field'>
-                <label>Phone number (not mandatory)</label>
+                <label>Je telefoonnummer (niet verplicht)</label>
                 <input
                   type='text'
                   name='phone'
-                  placeholder='079...'
+                  placeholder='06...'
                   defaultValue={content.phone}
                   onChange={onChange}
                 />
@@ -300,16 +300,16 @@ export function MapAddComponent() {
 
               {showError && (
                 <div className='ui negative message'>
-                  <div className='header'>Missing data</div>
+                  <div className='header'>Ontbrekende gegevens</div>
                   <p>
-                    Please fill in all the required details.
+                    Vul alsjenlieft de verplichte velden in.
                   </p>
                 </div>
               )}
 
               <div className='ui buttons'>
                 <button className='ui positive button' onClick={validateForm}>
-                  Send form
+                  Aanmelden
                 </button>
               </div>
             </div>
@@ -320,12 +320,12 @@ export function MapAddComponent() {
         <div className='ui vertical segment'>
           <div className='ui text container'>
             <div className='ui success message'>
-              <div className='header'>Thanks!</div>
+              <div className='header'>Super!</div>
               <p>
-                Your data has been successfully transmitted and will soon be visible on{' '}
+                Je gegevens zijn verstuurd en worden zichtbaar op{' '}
                 <Link to='/'>{' '}{data.site.siteMetadata.title}
                 </Link>{' '}
-                as soon as it was approved by the administrators.
+                na goedkeuring en controle van de gegevens.
               </p>
             </div>
           </div>
@@ -334,30 +334,17 @@ export function MapAddComponent() {
 
       <div className='ui vertical segment'>
         <div className='ui text container formcontainer'>
-          <h2>What's happening to my data?</h2>
-          Who'zinberg administrators will check your entry and add it to the interactive map once they gave their approval. This does usually take <strong>less than 24 hours</strong>.<br />
-          <h2>Which kind of entries will be approved?</h2>
-          Everyone can become part of the Who'zinberg community. Whether you're offering to read books to children via Skype, want to deliver a few slices of your delicious sour dough bread every Wednesday, or simply start a new take-away service for your products – this is your place. There will soon be an option for <strong>location-free services</strong>, too.
-          <h2>How can I remove my data?</h2>
-          If you <strong>want to be deleted</strong> from the Who'zinberg map, drop me an email to{' '}
+          <h2>Wat gebeurt er met mijn data?</h2>
+          De beheerders van MeierijstadConnect controleren je gegevens en voegen het toe aan de interactieve kaart bij akkoord. In de regel gebeurt dit binnen een dag.<br />
+          <h2>Wat voor soort data wordt goedgekeurd?</h2>
+          Iedereen kan bijdragen aan MeierijstadConnect. Of je nu via Skype wilt voorlezen aan kinderen, om de paar dagen controleert of iemand nog boodschappen nodig heeft of gewoon een nieuwe afhaaldienst wilt opzetten: hier kun je terecht.
+          <h2>Hoe kan ik mijn gegevens verwijderen?</h2>
+          Wanneer je <strong>verwijderd wilt worden</strong> van de interactieve kaart, stuur een email naar{' '}
           <a
-            href='mailto:mail@whozinberg.org'
+            href='mailto:joran@qtnconsulting.nl'
           >
-            mail@wwhozinberg.org
+            joran@qtnconsulting.nl
           </a>
-          <h2>Anything we can improve?</h2>
-          This tool is supposed to be used, why we're constantly looking for constructive feedback. If you have anything that you think would make this all better, please let me know via <a
-          href='mailto:mail@whozinberg.org'
-        >
-          email
-        </a>{' '}.
-          <h2>Why only Muizenberg?</h2>
-          Because at the moment, we all need to keep our lifes as local and isolated as possible. If you want this service to be available in your area,{' '}
-          <a
-          href='mailto:mail@whozinberg.org'
-        >
-            contact us via email
-        </a>{' '}and we'll talk about it. This complete project will soon be available as an <strong>open source repository</strong> on Github.
         </div>
       </div>
     </div>

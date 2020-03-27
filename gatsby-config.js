@@ -4,29 +4,29 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    author: 'Marc Fehr',
-    title: 'Community Isolation Map',
+    author: 'Joran Quinten',
+    title: 'Meierijstad Connect',
     description:
       'This is the open source project for building your own community map.',
-    email: 'mail@xyz.com',
-    teaserImage: "https://www.whozinberg.org/teaser.jpg",
+    email: 'connect@qtnconsulting.nl',
+    teaserImage: "https://www.meiereijstadconnect.nl/teaser.jpg",
     twitter: {
-      hashtag: 'yourHashtag',
-      handle: 'yourTwitterHandle'
+      hashtag: 'meiereijstadconnect',
+      handle: 'joranquinten'
     },
     share: {
-      text: 'This is the share text, follow @xyz and #abc',
-      hashtags: 'WhosInBerg,Coronavirus,StayTheFuckHome' // separate with commas,
+      text: 'MeierijstadConnect: het informatienetwerk voor de buurt. Help elkaar veilig door de Coronavirus isolatie heen.',
+      hashtags: 'MeierijstadConnect,Coronavirus,Blijfveilig,Houdafstand' // separate with commas,
     },
     menuLinks: [
       {title: 'Home', link: '/', icon: 'map'},
-      {title: 'Add', link: '/add', icon: 'plus'},
+      {title: 'Toevoegen', link: '/add', icon: 'plus'},
       {title: 'Contact', link: '/contact', icon: 'info'},
     ],
     mapData: {
       bounds: [
-        [18.459692001342773,-34.08692882376707],
-        [18.512563705444336,-34.1109517943943]
+        [5.361030,51.652081],
+        [5.671147,51.522248]
       ]
     },
   },
@@ -37,7 +37,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         // The property ID; the tracking code won't be generated without it
-        trackingId: "XX-XXXXXXXXX-X",
+        trackingId: "UA-227139319-1",
       },
     },
     {

@@ -15,10 +15,11 @@ const Add = () => {
             <h1 className='ui header'>
               <div className='content'>
               <span className='page-title'>
-                You've got some useful information to share? Test.
+               Heb je nuttige informatie om te delen?
               </span>
                 <div className='sub header'>
-                  While shops and restaurants are closing, people get more and more isolated. Stay safe, help where you can and keep your mental hygiene up. Thanks for sharing your information in the interactive map below.
+                  Terwijl winkels en restaurant noodgedwongen sluiten, raken mensen steeds meer geïsoleerd. Blijf veilig, help waar je kunt en blijf gezond.
+                  Bedankt voor het delen van informatie op de interactive kaart hieronder.
                 </div>
               </div>
             </h1>
@@ -27,10 +28,11 @@ const Add = () => {
 
         <section className='ui vertical segment'>
           <div className='ui text container formcontainer'>
-            <h2>This is how it works</h2>
-            Choose a place on the map where you want the information to appear. You'll be asked to provide us with information about your entry before you can send it off. <strong>We are going to check all entries manually</strong>. Once your entry is approvoved, you'll see it{' '}
+            <h2>Dit is hoe het werkt</h2>
+            Kies een locatie op de kaart waar de informatie hoort. Je wordt gevraagd om de locatie te omschrijven voordat je hem kunt insturen. 
+            <strong>We controleren alle inzendendingen met de hand</strong>. Zodra je toevoeging is geaccepteerd, verschijnt hij{' '}
             <Link to='/'>
-              here
+              op de kaart
             </Link>.
           </div>
         </section>

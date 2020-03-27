@@ -52,16 +52,16 @@ function Popup(props) {
       </div>
       <span className='clearfix' />
 
-      <h2>Name</h2>
-      {props.title}
+      <h2>Naam</h2> 
+      {props.title}     
 
-      <h2>Description</h2>
+      <h2>Omschrijving</h2>
       {ln2br(props.description)}
 
       <h2>Contact</h2>
       <span dangerouslySetInnerHTML={{ __html: urlify(props.contact) }} />
 
-      <h2>Address</h2>
+      <h2>Adres</h2>
       {ln2br(props.address)}
     </div>
   )
