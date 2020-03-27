@@ -8,7 +8,7 @@
   min-height: 100vh;
 
   strong {
-    border-bottom: 4px solid rgba(255, 221, 0, 0.6);
+    border-bottom: 4px solid #114555;
     color: #000 !important;
   }
 
@@ -16,7 +16,8 @@
     margin-top: .5rem;
     font-family: 'Roboto', sans-serif;
     color: black;
-    line-height: 0.9;
+    line-height: 1.1;
+    font-weight: lighter;
     display: block;
   }
 

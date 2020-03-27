@@ -22,7 +22,10 @@ const Footer = () => {
   return (
     <footer className='ui vertical inverted segment'>
       <div className='ui center aligned container'>
-        <i className='ui icon copyright' />{new Date().getFullYear()}{' '}{data.site.siteMetadata.title}{' ' }|{' '}<a href={`mailto:${data.site.siteMetadata.email}`}><i className='ui icon envelope' />Write us an email</a>{' '}|{' '}<a href={`https://twitter.com/hashtag/${data.site.siteMetadata.twitter.hashtag}`} target={'_blank'} rel={'noopener noreferrer'}><i className='ui icon twitter' />Follow us on Twitter</a>{' '}|{' '}Built with <i className={'ui icon heart'} />by <a href='https://twitter.com/@mrcfhr' target={'_blank'} rel={'noopener noreferrer'}>{data.site.siteMetadata.author}</a>
+        <i className='ui icon copyright' />{new Date().getFullYear()}{' '}{data.site.siteMetadata.title}{' ' }|{' '}<a href={`mailto:${data.site.siteMetadata.email}`}><i className='ui icon envelope' />Email</a>{' '}|{' '}With <i className={'ui icon heart'} />by <a href='https://twitter.com/@joranquinten' target={'_blank'} rel={'noopener noreferrer'}>{data.site.siteMetadata.author}</a>
+      </div>
+      <div className='ui center aligned container'>
+        <em>Thanks to Marc Fehr for Open Sourcing this project</em>
       </div>
     </footer>
   );

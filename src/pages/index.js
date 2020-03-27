@@ -27,7 +27,7 @@ const Index = () => {
           <div className='ui container'>
             <h1 className='ui header'>
               <div className='content'>
-                <span className={'page-title'}>Meijerijstad Connect: Het informatienetwerk om je buurt veilig te houden.</span>
+                <span className={'page-title'}>Meijerijstad Connect: Het informatienetwerk om je buurt gezond te houden.</span>
                 <div className='sub header'>
                   Bekijk de interactieve kaart en blijft verbonden met de gemeenschap tijdens het Coronavirus isolatie.{' '}
                   <Link to={'/add'}>
