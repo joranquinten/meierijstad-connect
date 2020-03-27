@@ -110,7 +110,7 @@ export function MapAddComponent() {
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
           body: encode({ "form-name": "service", title: 'New application', id: newPostKey })
         })
-          .then(() => alert("Success!"))
+          .then(() => {})
           .catch(error => console.error(error));
     
 
