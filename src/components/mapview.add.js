@@ -105,14 +105,15 @@ export function MapAddComponent() {
       //     console.log('error', e)
       //   })
 
+      const newPostKey = '-qwerlkjk1234SAf';
+
           fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: encode({ "form-name": "service-submission", name: 'NAME', email: 'EMAIL' })
-            //body: encode({ "form-name": "service-submission", ...content })
+            body: encode({ "form-name": "service", title: 'New application', id: newPostKey })
           })
             .then(() => alert("Success!"))
-            .catch(error => alert(error));
+            .catch(error => console.error(error));
     
 
     }
@@ -143,12 +144,12 @@ export function MapAddComponent() {
 
   return (
     <div id={'map-add-component'}>
-      <form name="service-submission" netlify="true" netlify-honeypot="bot-field" hidden>
-      <input name="bot-field" />
-      <input type="hidden" name="form-name" value="service-submission" />
-  <input type="text" name="name" />
-  <input type="email" name="email" />
-</form>
+      <form name="service" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+        <input name="bot-field" type="hidden" />
+        <input type="hidden" name="form-name" value="service" />
+        <input type="text" name="title" />
+        <input type="text" name="id" />
+      </form>
 
       <div
         id='mapcontainer'
