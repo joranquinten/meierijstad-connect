@@ -88,32 +88,30 @@ export function MapAddComponent() {
 
   React.useEffect(() => {
     if (formSent === true) {
-      // const newPostKey = firebase
-      //   .database()
-      //   .ref()
-      //   .child('data')
-      //   .push().key
+      const newPostKey = firebase
+        .database()
+        .ref()
+        .child('data')
+        .push().key
 
-      // firebase
-      //   .database()
-      //   .ref('/data/' + newPostKey)
-      //   .update(content)
-      //   .then(() => {
-      //     console.log('Writing done')
-      //   })
-      //   .catch(e => {
-      //     console.log('error', e)
-      //   })
+      firebase
+        .database()
+        .ref('/data/' + newPostKey)
+        .update(content)
+        .then(() => {
+          console.log('Writing done')
+        })
+        .catch(e => {
+          console.log('error', e)
+        })
 
-      const newPostKey = '-qwerlkjk1234SAf';
-
-          fetch("/", {
-            method: "POST",
-            headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: encode({ "form-name": "service", title: 'New application', id: newPostKey })
-          })
-            .then(() => alert("Success!"))
-            .catch(error => console.error(error));
+        fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: encode({ "form-name": "service", title: 'New application', id: newPostKey })
+        })
+          .then(() => alert("Success!"))
+          .catch(error => console.error(error));
     
 
     }
@@ -144,6 +142,7 @@ export function MapAddComponent() {
 
   return (
     <div id={'map-add-component'}>
+      {/* This static form is required for Netlify to scrape, the fields need to align with the sent fields via the .fetch */}
       <form name="service" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
         <input name="bot-field" type="hidden" />
         <input type="hidden" name="form-name" value="service" />
