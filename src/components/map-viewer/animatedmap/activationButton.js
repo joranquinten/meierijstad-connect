@@ -9,7 +9,7 @@ export const ActivationButton = ({
   deactivate,
   // @ts-ignore
   initialState,
-  buttonTexts = ['Activate map', 'Activate scroll'],
+  buttonTexts = ['Activeer kaart', 'Activateer scroll'],
   icons = ['moving.svg', 'scrolling.svg']
 }) => {
   const [state, setState] = useState(initialState)

@@ -130,8 +130,8 @@ function AnimatedMap(props) {
     map.deactivateMap()
 
     const interactionControl = new InteractionToggle(map, [
-      'Activate map',
-      'Activate scrolling'
+      'Activeer kaart',
+      'Activeer scrolling'
     ])
     map.addControl(interactionControl, 'top-right')
 
