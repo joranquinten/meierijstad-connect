@@ -104,8 +104,24 @@ export function MapAddComponent() {
         .catch(e => {
           console.log('error', e)
         })
+
+        fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: encode({ "form-name": "service", title: 'New application', id: newPostKey })
+        })
+          .then(() => {})
+          .catch(error => console.error(error));
+    
+
     }
   }, [formSent])
+
+  const encode = (data) => {
+    return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
+  }
 
   const validateForm = () => {
     let error = false
@@ -126,6 +142,14 @@ export function MapAddComponent() {
 
   return (
     <div id={'map-add-component'}>
+      {/* This static form is required for Netlify to scrape, the fields need to align with the sent fields via the .fetch */}
+      <form name="service" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+        <input name="bot-field" type="hidden" />
+        <input type="hidden" name="form-name" value="service" />
+        <input type="text" name="title" />
+        <input type="text" name="id" />
+      </form>
+
       <div
         id='mapcontainer'
         style={{ display: positionSelected ? 'none' : 'inherit' }}
