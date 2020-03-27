@@ -21,7 +21,7 @@ module.exports = {
     menuLinks: [
       {title: 'Home', link: '/', icon: 'map'},
       {title: 'Toevoegen', link: '/add', icon: 'plus'},
-      {title: 'Contact', link: '/contact', icon: 'info'},
+      // {title: 'Contact', link: '/contact', icon: 'info'},
     ],
     mapData: {
       bounds: [
