@@ -88,24 +88,40 @@ export function MapAddComponent() {
 
   React.useEffect(() => {
     if (formSent === true) {
-      const newPostKey = firebase
-        .database()
-        .ref()
-        .child('data')
-        .push().key
+      // const newPostKey = firebase
+      //   .database()
+      //   .ref()
+      //   .child('data')
+      //   .push().key
 
-      firebase
-        .database()
-        .ref('/data/' + newPostKey)
-        .update(content)
-        .then(() => {
-          console.log('Writing done')
-        })
-        .catch(e => {
-          console.log('error', e)
-        })
+      // firebase
+      //   .database()
+      //   .ref('/data/' + newPostKey)
+      //   .update(content)
+      //   .then(() => {
+      //     console.log('Writing done')
+      //   })
+      //   .catch(e => {
+      //     console.log('error', e)
+      //   })
+
+          fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: encode({ "form-name": "service-submission", ...content })
+          })
+            .then(() => alert("Success!"))
+            .catch(error => alert(error));
+    
+
     }
   }, [formSent])
+
+  const encode = (data) => {
+    return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
+  }
 
   const validateForm = () => {
     let error = false
@@ -126,6 +142,13 @@ export function MapAddComponent() {
 
   return (
     <div id={'map-add-component'}>
+      <form name="service-submission" netlify="true" netlify-honeypot="bot-field" hidden>
+      <input name="bot-field" />
+      <input type="hidden" name="form-name" value="service-submission" />
+  <input type="text" name="name" />
+  <input type="email" name="email" />
+</form>
+
       <div
         id='mapcontainer'
         style={{ display: positionSelected ? 'none' : 'inherit' }}
