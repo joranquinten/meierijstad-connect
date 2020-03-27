@@ -18,8 +18,9 @@ const Add = () => {
                Heb je nuttige informatie om te delen?
               </span>
                 <div className='sub header'>
-                  Terwijl winkels en restaurant noodgedwongen sluiten, raken mensen steeds meer geïsoleerd. Blijf veilig, help waar je kunt en blijf gezond.
-                  Bedankt voor het delen van informatie op de interactive kaart hieronder.
+                  Terwijl winkels en restaurant noodgedwongen sluiten, raken mensen steeds meer geïsoleerd en hebben misschien nét dat beetje hulp of aandacht nodig.
+                  Door onze kennis en krachten te bundelen kunnen we elkaar helpen.
+                  Alvast bedankt voor het delen van informatie op de interactive kaart hieronder.
                 </div>
               </div>
             </h1>
