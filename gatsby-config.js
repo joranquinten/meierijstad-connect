@@ -7,7 +7,7 @@ module.exports = {
     author: 'Joran Quinten',
     title: 'Meierijstad Connect',
     description:
-      'This is the open source project for building your own community map.',
+      'Verbindt Meierijstad met elkaar.',
     email: 'connect@qtnconsulting.nl',
     teaserImage: "https://www.meiereijstadconnect.nl/teaser.jpg",
     twitter: {
