@@ -13,13 +13,13 @@ html {
   }
 
   strong {
-    border-bottom: 4px solid #114555;
+    border-bottom: 4px solid #78BE1F;
     color: #000 !important;
   }
 
   .page-title {
     font-family: 'Roboto', sans-serif;
-    color: black;
+    color: #114555;
     line-height: 0.9;
     display: block;
     @media screen and (min-width: 820px) {
@@ -85,5 +85,11 @@ html {
   }
   .ui.primary.button {
     background-color: #37ACE7;
+  }
+
+  @media only screen and (min-width: 1200px) {
+    .ui.container {
+      width: 840px;
+    }
   }
 }

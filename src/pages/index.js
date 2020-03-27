@@ -27,13 +27,13 @@ const Index = () => {
           <div className='ui container'>
             <h1 className='ui header'>
               <div className='content'>
-                <span className={'page-title'}>Meijerijstad Connect: Het informatienetwerk om je buurt gezond te houden.</span>
+                <span className={'page-title'}>Meijerijstad Connect:<br/>Het informatienetwerk wat de buurt verbindt.</span>
                 <div className='sub header'>
-                  Bekijk de interactieve kaart en blijft verbonden met de gemeenschap tijdens het Coronavirus isolatie.{' '}
-                  <Link to={'/add'}>
+                  Bekijk de interactieve kaart en blijf verbonden met de gemeenschap tijdens de Coronavirus isolatie.{' '}
+                  <br/><Link to={'/add'}>
                     Voeg publieke informatie toe aan de kaart
                   </Link>
-                  {' '}en help iedereen gezond te houden.
+                  {' '}en help elkaar.
                 </div>
               </div>
             </h1>
@@ -47,7 +47,7 @@ const Index = () => {
 
             <h2>Wat zie ik op de kaart?</h2>
             <p>
-              Op het moment laat de kaart mensen, bedrijven en organisaties zien die hulp en diensten aanbieden binnen gemeente Meierijstad.
+              De kaart toont mensen en organisaties die hulp en diensten aanbieden binnen gemeente Meierijstad.
             </p>
             <Link
               to={'/add'}
@@ -73,17 +73,16 @@ const Index = () => {
       <div className='ui vertical segment'>
         <div className='ui text container formcontainer'>
           <h2>Kunnen we iets verbeteren?</h2>
-          Dit is een tool die bedoeld is voor gebruik, en constructieve feedback is altijd welkom. Heb je ideeën om bepaalde onderdelen beter te maken, laat het me weten via 
-          This tool is supposed to be used, why we're constantly looking for constructive feedback. If you have anything that you think would make this all better, please let me know via{' '}
+          Dit is een tool die bedoeld om snel contact te leggen met relevante diensten. Constructieve feedback is altijd welkom. Heb je ideeën om bepaalde onderdelen beter te maken, laat het me weten via{' '}
           <a
-            href='mailto:joran@qtnconsulting.nl'
+            href='mailto:connect@qtnconsulting.nl'
           >
-            joran@qtnconsulting.nl
+            connect@qtnconsulting.nl
           </a>.
           <h2>Waarom alleen Meierijstad?</h2>
           Omdat het op het moment veiliger is om zo lokaal en geïsoleerd mogelijk te leven. Wil je soortgelijke oplossing in jouw directe omgeving inzetten? Neem dan even {' '}
           <a
-          href='mailto:joran@qtnconsulting.nl'
+          href='mailto:connect@qtnconsulting.nl'
         >
             contact op via email
         </a>{' '} om de mogelijkheden te bespreken.

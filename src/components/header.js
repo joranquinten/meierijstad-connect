@@ -19,7 +19,7 @@ const Header = () => {
     }
   `);
 
-  const logo = null; //require('../images/logo.svg');
+  const logo = require('../images/logo.svg');
   const shareText = encodeURI(data.site.siteMetadata.share.text);
   const shareHashtags = encodeURI(data.site.siteMetadata.share.hashtags);
 
@@ -34,7 +34,8 @@ const Header = () => {
             }}
           />
           <h1 className={'logo-font'}>
-            <span>{data.site.siteMetadata.title}</span>
+            <span>Meierijstad</span>
+            <span>Connect</span>
           </h1>
         </div>
         <div className={'ui four wide right aligned column'} style={{padding: '.8rem 1.4rem 0 0'}}>
