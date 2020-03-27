@@ -1,3 +1,4 @@
+
 header {
   .logo-column {
     height: 50px;
@@ -5,23 +6,34 @@ header {
     justify-content: flex-end;
     .header-logo {
       float: left;
-      width: 50px;
-      height: 50px;
+      width: 40px;
+      height: 40px;
+      margin: 5px;
       background-size: cover;
       display: flex;
-      -webkit-animation: rotation 15s infinite linear;
-      animation: rotation 15s infinite linear;
-      -moz-animation: rotation 15s infinite linear;
+      -webkit-animation: rotation 360s infinite linear;
+      animation: rotation 360s infinite linear;
+      -moz-animation: rotation 360s infinite linear;
     }
     h1.logo-font {
       display: flex;
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Helvetiva Neue', Arial, sans-serif;
       line-height: 50px;
+      text-align: bottom;
       font-size: 1rem;
-      color: black;
+      margin-left: 1rem;
+      color: #114555;
       left: 0;
       margin-top: 0;
       vertical-align: middle;
+      
+      &>:first-child {
+        color: #37ACE7;
+      }
+      &>:last-child {
+        color: #114555;
+        font-weight: bold;
+      }
     }
   }
   .icon-container {
@@ -34,7 +46,7 @@ header {
     a {
       display: flex;
       align-self: center;
-      color: #24D1D2;
+      color: #78BE1F;
       opacity: 0.7;
       font-size: 1.5;
 

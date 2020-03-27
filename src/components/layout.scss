@@ -8,21 +8,22 @@
   min-height: 100vh;
 
   strong {
-    border-bottom: 4px solid rgba(255, 221, 0, 0.6);
+    border-bottom: 4px solid #78BE1F;
     color: #000 !important;
   }
 
   .page-title {
     margin-top: .5rem;
     font-family: 'Roboto', sans-serif;
-    color: black;
-    line-height: 0.9;
+    color: #37ACE7;
+    line-height: 1.1;
+    font-weight: 200;
     display: block;
   }
 
   h1.ui.header .sub.header {
     font-size: 1.5rem;
-    color: black;
+    color: #114555;
     margin: 1rem auto .5rem auto;
   }
 

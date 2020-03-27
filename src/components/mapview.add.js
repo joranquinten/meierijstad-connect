@@ -104,8 +104,24 @@ export function MapAddComponent() {
         .catch(e => {
           console.log('error', e)
         })
+
+        fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: encode({ "form-name": "service", title: 'New application', id: newPostKey })
+        })
+          .then(() => {})
+          .catch(error => console.error(error));
+    
+
     }
   }, [formSent])
+
+  const encode = (data) => {
+    return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
+  }
 
   const validateForm = () => {
     let error = false
@@ -126,6 +142,14 @@ export function MapAddComponent() {
 
   return (
     <div id={'map-add-component'}>
+      {/* This static form is required for Netlify to scrape, the fields need to align with the sent fields via the .fetch */}
+      <form name="service" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+        <input name="bot-field" type="hidden" />
+        <input type="hidden" name="form-name" value="service" />
+        <input type="text" name="title" />
+        <input type="text" name="id" />
+      </form>
+
       <div
         id='mapcontainer'
         style={{ display: positionSelected ? 'none' : 'inherit' }}
@@ -141,7 +165,7 @@ export function MapAddComponent() {
               className='ui primary button'
               onClick={() => setMapActive(true)}
             >
-              Activeer kaart en voeg service toe
+              Voeg service of informatie toe
             </button>
           </div>
         )}
@@ -335,16 +359,18 @@ export function MapAddComponent() {
       <div className='ui vertical segment'>
         <div className='ui text container formcontainer'>
           <h2>Wat gebeurt er met mijn data?</h2>
-          De beheerders van MeierijstadConnect controleren je gegevens en voegen het toe aan de interactieve kaart bij akkoord. In de regel gebeurt dit binnen een dag.<br />
+          <p>We controleren je gegevens en voegen het toe aan de interactieve kaart wanneer we vinden dat het een nuttige bijdrage is. In de regel gebeurt dit binnen een dag. Als we vinden dat er nog informatie ontbreekt, of als er een reden is dat we het niet plaatsen, laten we dat altijd even weten.</p>
           <h2>Wat voor soort data wordt goedgekeurd?</h2>
-          Iedereen kan bijdragen aan MeierijstadConnect. Of je nu via Skype wilt voorlezen aan kinderen, om de paar dagen controleert of iemand nog boodschappen nodig heeft of gewoon een nieuwe afhaaldienst wilt opzetten: hier kun je terecht.
+          <p>Iedereen kan bijdragen aan Meierijstad Connect. Of je nu via Skype wilt voorlezen aan kinderen, beschikbaar bent om gewoon even te kletsen, wat kleine boodschappen haalt of gewoon een nieuwe afhaaldienst wilt opzetten: hier kun je terecht.</p>
+          <p>Vrijwilligers, profit of non-profit, we staan veel toe, als het bijdraagt aan het doel om de inwoners van Meierijstad te helpen.</p>
           <h2>Hoe kan ik mijn gegevens verwijderen?</h2>
-          Wanneer je <strong>verwijderd wilt worden</strong> van de interactieve kaart, stuur een email naar{' '}
+          <p>Wanneer je <strong>verwijderd wilt worden</strong> van de interactieve kaart, stuur een email naar{' '}
           <a
-            href='mailto:joran@qtnconsulting.nl'
+            href='mailto:connect@qtnconsulting.nl'
           >
-            joran@qtnconsulting.nl
-          </a>
+            connect@qtnconsulting.nl
+          </a>.
+          </p>
         </div>
       </div>
     </div>
