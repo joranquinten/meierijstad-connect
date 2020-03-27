@@ -108,7 +108,8 @@ export function MapAddComponent() {
           fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: encode({ "form-name": "service-submission", ...content })
+            body: encode({ "form-name": "service-submission", name: 'NAME', email: 'EMAIL' })
+            //body: encode({ "form-name": "service-submission", ...content })
           })
             .then(() => alert("Success!"))
             .catch(error => alert(error));
