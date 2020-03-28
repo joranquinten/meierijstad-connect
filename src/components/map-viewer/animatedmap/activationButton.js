@@ -35,7 +35,7 @@ export const ActivationButton = ({
             setState(false)
           }}
         >
-          <img src={require('./' + icons[1])} width='30px' />
+          <img src={require('./' + icons[1])} width='20px' />
           <br />
           {buttonTexts[1]}
         </div>

@@ -63,6 +63,9 @@ function Popup(props) {
 
       <h2>Adres</h2>
       {ln2br(props.address)}
+
+       {props.url && <h2>Website</h2>}
+      {props.url && <a href={props.url} target={'_blank'} rel={'noopener noreferrer'}>Naar website</a>}
     </div>
   )
 }

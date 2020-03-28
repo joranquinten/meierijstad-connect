@@ -1,9 +1,9 @@
 #map-view {
+  position: relative;
   // prevents "swimming" layout on mobile
   overflow: hidden;
 
   strong {
-    border-bottom: 4px solid #78BE1F;
     color: #000 !important;
   }
 
@@ -45,9 +45,6 @@
     margin: 50px 0 0 0;
 
     h2 {
-      font-family: TamediaUI, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu,
-        Cantarell, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji,
-        Segoe UI Symbol, Noto Color Emoji !important;
       font-size: 1em;
       font-weight: bold;
     }

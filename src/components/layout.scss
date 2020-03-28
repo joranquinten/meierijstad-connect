@@ -6,24 +6,157 @@
   // the React components are being injected into.
 
   min-height: 100vh;
+  color: #352F4F;
+
+  a {
+    color: #7B97ED;
+    &:hover,
+    &:focus,
+    &:active {
+      color: #BA6A9A;
+    }
+  }
+
+  .icon-container a {
+    color: #352F4F;
+  }
+
+  .ui.positive.button {
+      background-color: #92D196;
+      color: #352F4F;
+  }
+
+  .ui.basic.black.button {
+    border-radius: 3px;
+    color: #352F4F !important;
+    &.active {
+
+    background-color: #BA6A9A !important;
+    color: #fff !important;
+    }
+  }
+
+  input, textarea {
+    border-radius: 3px;
+  }
+
+  .ui.icon.heart {
+    animation: heartbeat 1.4s infinite;
+  }
+
+  @keyframes heartbeat
+  {
+    0%
+    {
+      transform: scale( .90 );
+    }
+    15%
+    {
+      transform: scale( 1 );
+    }
+    30%
+    {
+      transform: scale( .90 );
+    }
+    45%
+    {
+      transform: scale( 1 );
+    }
+    80%
+    {
+      transform: scale( .90 );
+    }
+    100%
+    {
+      transform: scale( .90 );
+    }
+  }
+
+  header {
+    padding-bottom: 2rem;
+    margin: 0;
+    position: relative;
+  }
+  header:before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    bottom: 0;
+    right: -50%;
+    z-index: -1;
+    width: 200%;
+    height: 240px;
+    background: rgba(146, 209, 150, 0.2);
+    transform: rotate(-3deg);
+    transform-origin: center;
+}
+
+  header + nav {
+    margin-top: 0;
+    > ul {
+      margin: 0;
+      padding: 1em 0;
+    }
+  }
 
   strong {
-    border-bottom: 4px solid #78BE1F;
     color: #000 !important;
+  }
+
+  .homepage > .segment {
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .col-2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+      margin: 1rem 0;
+
+    > * {
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+      margin: 1rem 0;
+
+      h3 {
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        font-weight: 400;
+        font-size: 1.34rem;
+      }
+      p {
+        font-size: 1.16rem;
+        font-weight: 200;
+        letter-spacing: 0.2px;
+      }
+    }
+
+    @media only screen and (min-width: 800px) {
+      > * {
+        width: calc(50% - 1rem);
+      }   
+      > *:nth-child(even) {
+        margin-left: 2rem;
+      }
+    }
   }
 
   .page-title {
     margin-top: .5rem;
     font-family: 'Roboto', sans-serif;
-    color: #37ACE7;
+    color: #BA6A9A;
     line-height: 1.1;
     font-weight: 200;
     display: block;
   }
 
   h1.ui.header .sub.header {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 200;
     font-size: 1.5rem;
-    color: #114555;
+    letter-spacing: 0.2px;
+    color: #352F4F;
     margin: 1rem auto .5rem auto;
   }
 
@@ -55,9 +188,21 @@
       max-width: 550px;
     }
   }
+#map-view {
 
+  position: relative;
+}
   .mapform {
+
     margin: 50px 0 0 0;
+
+    @media only screen and (min-width: 1090px) {
+      position: absolute;
+      left: 10px;
+      top: 0;
+      z-index: 100000;
+      margin-top: 10px;
+    }
 
     // background-color: rgb(245, 245, 245);
 
@@ -66,10 +211,17 @@
       font-size: 1em;
       font-weight: bold;
       margin: calc(2rem - .025em) 0 1rem !important;
+
+      @media only screen and (min-width: 1200px) {
+        margin: 0.4rem 0 !important;
+      }
     }
   }
 
   #mapcontainer {
     position: relative;
   }
+}
+.ui.inverted.segment {
+  background-color: #352F4F;
 }

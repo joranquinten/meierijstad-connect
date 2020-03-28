@@ -9,7 +9,7 @@ module.exports = {
     description:
       'Verbindt Meierijstad met elkaar.',
     email: 'connect@qtnconsulting.nl',
-    teaserImage: "https://www.meiereijstadconnect.nl/teaser.jpg",
+    teaserImage: "https://www.meierijstadconnect.nl/teaser.jpg",
     twitter: {
       hashtag: 'meiereijstadconnect',
       handle: 'joranquinten'
@@ -21,7 +21,7 @@ module.exports = {
     menuLinks: [
       {title: 'Home', link: '/', icon: 'map'},
       {title: 'Toevoegen', link: '/add', icon: 'plus'},
-      // {title: 'Contact', link: '/contact', icon: 'info'},
+      {title: 'Info', link: '/info', icon: 'info'},
     ],
     mapData: {
       bounds: [
@@ -37,7 +37,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         // The property ID; the tracking code won't be generated without it
-        trackingId: "UA-227139319-1",
+        trackingId: "227139319",
       },
     },
     {
