@@ -2,7 +2,12 @@
   padding: 0 0 20px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+
+    @media only screen and (min-width: 1090px) {
+      flex-wrap: no-wrap;
+      flex-direction: column;
+    }
+  // justify-content: space-between;
 
   button {
     margin: 2px !important;
@@ -25,8 +30,10 @@
   }
 
   // Change all category colours here for the button and circle styling
-  $categories: all childcare food takeaway shopforyou fitness shop medical social petcare other;
-  $cat_colors: #114555 #1289A7 #D980FA #30336b #d35400 #8e44ad #d6bc2c #7dc973 #3399ff #e1b12c #222f3e;
+  $categories: all childcare food shopforyou fitness medical social petcare other;
+  $cat_colors: #352F4F #1289A7 #BA6A9A #d35400 #8e44ad #92D196 #3399ff #e1b12c #222f3e;
+
+
 
   @each $cat in $categories {
     $i: index($categories, $cat);

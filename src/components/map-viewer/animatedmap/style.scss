@@ -13,7 +13,6 @@
     box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     text-align: center;
-    font-family: TamediaChart, Helvetica, Arial, sans-serif;
     font-family: var(--chart-font-stack);
     letter-spacing: 0.4px;
     font-size: 0.8em;
@@ -30,7 +29,7 @@
   }
 
   .active {
-    background-color: red;
+    background-color: grey;
     color: white;
   }
 }

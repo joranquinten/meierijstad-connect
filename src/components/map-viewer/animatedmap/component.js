@@ -43,6 +43,7 @@ function AnimatedMap(props) {
           id,
           name,
           phone,
+          url,
           position,
           title
         }
@@ -135,7 +136,7 @@ function AnimatedMap(props) {
     ])
     map.addControl(interactionControl, 'top-right')
 
-    setInteractivity(false)
+    setInteractivity(true)
 
     setMapObject(map)
 

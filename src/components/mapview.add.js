@@ -43,6 +43,7 @@ export function MapAddComponent() {
     contact: '',
     address: '',
     phone: '',
+    url: '',
     email: '',
     name: '',
     timestamp: Date.now(),
@@ -322,6 +323,17 @@ export function MapAddComponent() {
                 />
               </div>
 
+              <div className='field'>
+                <label>Je website (niet verplicht)</label>
+                <input
+                  type='text'
+                  name='url'
+                  placeholder='http...'
+                  defaultValue={content.url}
+                  onChange={onChange}
+                />
+              </div>
+
               {showError && (
                 <div className='ui negative message'>
                   <div className='header'>Ontbrekende gegevens</div>
@@ -355,24 +367,6 @@ export function MapAddComponent() {
           </div>
         </div>
       )}
-
-      <div className='ui vertical segment'>
-        <div className='ui text container formcontainer'>
-          <h2>Wat gebeurt er met mijn data?</h2>
-          <p>We controleren je gegevens en voegen het toe aan de interactieve kaart wanneer we vinden dat het een nuttige bijdrage is. In de regel gebeurt dit binnen een dag. Als we vinden dat er nog informatie ontbreekt, of als er een reden is dat we het niet plaatsen, laten we dat altijd even weten.</p>
-          <h2>Wat voor soort data wordt goedgekeurd?</h2>
-          <p>Iedereen kan bijdragen aan Meierijstad Connect. Of je nu via Skype wilt voorlezen aan kinderen, beschikbaar bent om gewoon even te kletsen, wat kleine boodschappen haalt of gewoon een nieuwe afhaaldienst wilt opzetten: hier kun je terecht.</p>
-          <p>Vrijwilligers, profit of non-profit, we staan veel toe, als het bijdraagt aan het doel om de inwoners van Meierijstad te helpen.</p>
-          <h2>Hoe kan ik mijn gegevens verwijderen?</h2>
-          <p>Wanneer je <strong>verwijderd wilt worden</strong> van de interactieve kaart, stuur een email naar{' '}
-          <a
-            href='mailto:connect@qtnconsulting.nl'
-          >
-            connect@qtnconsulting.nl
-          </a>.
-          </p>
-        </div>
-      </div>
     </div>
   )
 }

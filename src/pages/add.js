@@ -15,13 +15,11 @@ const Add = () => {
             <h1 className='ui header'>
               <div className='content'>
               <span className='page-title'>
-               Heb je nuttige informatie om te delen?
-              </span>
+               Informatie toevoegen
                 <div className='sub header'>
-                  Terwijl winkels en restaurant noodgedwongen sluiten, raken mensen steeds meer geïsoleerd en hebben misschien nét dat beetje hulp of aandacht nodig.
-                  Door onze kennis en krachten te bundelen kunnen we elkaar helpen.
-                  Alvast bedankt voor het delen van informatie op de interactive kaart hieronder.
+                Zo helpen we elkaar!
                 </div>
+              </span>
               </div>
             </h1>
           </div>
@@ -30,8 +28,7 @@ const Add = () => {
         <section className='ui vertical segment'>
           <div className='ui text container formcontainer'>
             <h2>Dit is hoe het werkt</h2>
-            Kies een locatie op de kaart waar de informatie hoort. Je wordt gevraagd om de locatie te omschrijven voordat je hem kunt insturen. 
-            <strong>We controleren alle inzendendingen met de hand</strong>. Zodra je toevoeging is geaccepteerd, verschijnt hij{' '}
+            Kies een locatie op de kaart. Voeg je dienst of informatie toe door de vragen in te vullen. <strong>We controleren alle inzendendingen om misbruik te voorkomen.</strong> Zodra je toevoeging is geaccepteerd, verschijnt hij{' '}
             <Link to='/'>
               op de kaart
             </Link>.
@@ -40,6 +37,21 @@ const Add = () => {
         <section>
           <MapAddComponent />
         </section>
+
+      <section className='ui vertical segment' style={{minHeight: '55vh'}}>
+        <div className='ui text container formcontainer'>
+          <h2>Wat gebeurt er met mijn data?</h2>
+          <p>We controleren je gegevens en voegen het toe aan de interactieve kaart wanneer we vinden dat het een nuttige bijdrage is. In de regel gebeurt dit binnen een dag. Als we vinden dat er nog informatie ontbreekt, of als er een reden is dat we het niet plaatsen, laten we dat altijd even weten.</p>
+
+          <h2>Wat voor soort data wordt goedgekeurd?</h2>
+          <p>JIedereen kan bijdragen aan Meierijstad Connect. Of je nu via Skype wilt voorlezen aan kinderen, beschikbaar bent om gewoon even te kletsen, wat kleine boodschappen haalt of een nieuwe afhaaldienst wilt opzetten: hier kun je terecht.</p>
+          <p>Vrijwilligers, profit of non-profit, we staan veel toe, als het bijdraagt aan het doel om de inwoners van Meierijstad te helpen.</p>
+
+          <h2>Hoe kan ik mijn gegevens verwijderen?</h2>
+          <p>Wanneer je <strong>verwijderd wilt worden</strong> van de interactieve kaart, stuur een email naar{' '} <a href='mailto:connect@qtnconsulting.nl'>connect@qtnconsulting.nl</a> en je gegevens worden zo snel mogelijk verwijderd. Als er geen noodzaak meer is om dit inforamtienetwerk te gebuiken, dan worden automatisch alle
+          gegevens verwijderd.</p>
+        </div>
+      </section>
 
       </div>
     </Layout>
