@@ -15,7 +15,8 @@ export default function JSONtoGeoJSON(props) {
 				"title": val.title,
 				"description": val.description,
 				"contact": val.contact,
-				"address": val.address
+				"address": val.address,
+				"url": val.url
 			}
 		}
 		geoJson['features'].push(newFeature);
