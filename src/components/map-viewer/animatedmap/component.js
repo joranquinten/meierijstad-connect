@@ -26,7 +26,7 @@ const bounds = [
  */
 
 function AnimatedMap(props) {
-  const [mapObject, setMapObject] = useState(null)
+  const [mapObject, setMapObject, selfCoords] = useState(null)
 
   /* We query all the firebase data here */
 
@@ -88,6 +88,18 @@ function AnimatedMap(props) {
   }
 
   useEffect(() => {
+
+    let selfCoords;
+    if (window) {
+      navigator.geolocation.getCurrentPosition(pos => {
+        selfCoords = pos.coords;
+      }, () => {}, {
+        enableHighAccuracy: true,
+        timeout: 5000,
+        maximumAge: 0
+      });
+    }
+
     const map = new mapboxgl.Map({
       container: 'map',
       style: mapStyle,
@@ -136,8 +148,6 @@ function AnimatedMap(props) {
     ])
     map.addControl(interactionControl, 'top-right')
 
-    setInteractivity(true)
-
     setMapObject(map)
 
     // Initial adjustments
@@ -167,6 +177,44 @@ function AnimatedMap(props) {
           'line-width': 2
         }
       })
+
+      if (selfCoords) {
+        const featureSelf = {
+          type: 'Feature',
+          geometry: {
+            type: "Point",
+            coordinates: [selfCoords.longitude, selfCoords.latitude]
+          }
+        }
+
+        const metersToPixelsAtMaxZoom = (meters, latitude) =>
+  meters / 0.075 / Math.cos(latitude * Math.PI / 180)
+
+      map.addSource('data-self', {
+        type: 'geojson',
+        data: featureSelf
+      });
+            map.addLayer({
+        id: 'data-self',
+        type: 'circle',
+        source: 'data-self',
+        paint: {
+          "circle-radius": {
+            stops: [
+              [0, 0],
+              [20, metersToPixelsAtMaxZoom(1000, selfCoords.latitude)]
+            ],
+            base: 2
+          },
+
+          'circle-color': '#92D196',
+          'circle-opacity': 0.2,
+          'circle-stroke-width': 2,
+          'circle-stroke-color': '#92D196'
+        }
+      })
+
+      }
 
       map.addSource('data', {
         type: 'geojson',
@@ -225,8 +273,11 @@ function AnimatedMap(props) {
       if (props.onLoad) {
         props.onLoad()
       }
+
     })
   }, [])
+  
+  setInteractivity(true)
 
   return (
     <>
