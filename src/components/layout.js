@@ -25,13 +25,13 @@ import '@ta-interaktiv/semantic-ui/semantic/dist/components/grid.css'
 import '../styles/index.scss';
 import './layout.scss';
 
-const Layout = ({ children }) => {
+const Layout = ({ headless, children }) => {
   return (
     <div id={'app'}>
-      <Header />
-      <Navbar />
+      {!headless && <Header />}
+      {!headless &&<Navbar />}
       <main>{children}</main>
-      <Footer />
+      {!headless &&<Footer />}
     </div>
   );
 };
