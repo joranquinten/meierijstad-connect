@@ -7,7 +7,30 @@ html {
   // add all styles that should apply to the whole project within this
   // The ID "app" is part of the HTML template, and is the entry point where
   // the React components are being injected into.
+  .slanted {
+    position: relative;
 
+    &:after {
+      position: absolute;
+      z-index: -100;
+      height: 110%;
+      content: "";
+      top: 5%;
+      width: 120vw;
+      left: 50%;
+      transform:rotate(1deg) translateX(-60vw);
+      background-color: rgba(186, 106, 154, 0.1);
+    }
+  }
+
+  .bold {
+    font-weight: 400;
+  }
+
+  .highlighted {
+    color: #BA6A9A;
+  }
+  
   .ui.image.header {
     margin-top: 1rem;
   }
