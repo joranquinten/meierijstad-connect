@@ -44,7 +44,7 @@ const Add = () => {
           <p>We controleren je gegevens en voegen het toe aan de interactieve kaart wanneer we vinden dat het een nuttige bijdrage is. In de regel gebeurt dit binnen een dag. Als we vinden dat er nog informatie ontbreekt, of als er een reden is dat we het niet plaatsen, laten we dat altijd even weten.</p>
 
           <h2>Wat voor soort data wordt goedgekeurd?</h2>
-          <p>JIedereen kan bijdragen aan Meierijstad Connect. Of je nu via Skype wilt voorlezen aan kinderen, beschikbaar bent om gewoon even te kletsen, wat kleine boodschappen haalt of een nieuwe afhaaldienst wilt opzetten: hier kun je terecht.</p>
+          <p>Iedereen kan bijdragen aan Meierijstad Connect. Of je nu via Skype wilt voorlezen aan kinderen, beschikbaar bent om gewoon even te kletsen, wat kleine boodschappen haalt of een nieuwe afhaaldienst wilt opzetten: hier kun je terecht.</p>
           <p>Vrijwilligers, profit of non-profit, we staan veel toe, als het bijdraagt aan het doel om de inwoners van Meierijstad te helpen.</p>
 
           <h2>Hoe kan ik mijn gegevens verwijderen?</h2>

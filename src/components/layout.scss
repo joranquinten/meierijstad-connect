@@ -1,3 +1,10 @@
+body {
+
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1.16rem;
+    font-weight: 200;
+    letter-spacing: 0.2px;
+}
 #app {
   // prevents "swimming" layout on mobile
   overflow: hidden;
@@ -42,6 +49,22 @@
 
   .ui.icon.heart {
     animation: heartbeat 1.4s infinite;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.05em;
+  }
+
+  .ui.text.container {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1.16rem;
+    font-weight: 200;
+    letter-spacing: 0.2px;
   }
 
   @keyframes heartbeat
