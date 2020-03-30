@@ -246,7 +246,7 @@ export function MapAddComponent() {
                   name='title'
                   value={content.title}
                   onChange={onChange}
-                  placeholder='Ik help met boodschappen / Ik heb toiletpapier over / anders?'
+                  placeholder='Ik help met boodschappen / Ik help met (video)bellen / anders?'
                 />
               </div>
 
@@ -279,6 +279,17 @@ export function MapAddComponent() {
                   name='address'
                   placeholder='Hoofdstraat 1, Meierijstad. Dit gebruiken we om de aangegeven locatie te bevestigen.'
                   defaultValue={content.address}
+                  onChange={onChange}
+                />
+              </div>
+
+              <div className='field'>
+                <label>Je website (niet verplicht)</label>
+                <input
+                  type='text'
+                  name='url'
+                  placeholder='http...'
+                  defaultValue={content.url}
                   onChange={onChange}
                 />
               </div>
@@ -319,17 +330,6 @@ export function MapAddComponent() {
                   name='phone'
                   placeholder='06...'
                   defaultValue={content.phone}
-                  onChange={onChange}
-                />
-              </div>
-
-              <div className='field'>
-                <label>Je website (niet verplicht)</label>
-                <input
-                  type='text'
-                  name='url'
-                  placeholder='http...'
-                  defaultValue={content.url}
                   onChange={onChange}
                 />
               </div>
