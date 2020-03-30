@@ -2,6 +2,10 @@
   width: 100%;
   // Set map height here for adjust dimensions to your boundaries
   height: 55vh;
+
+  @media only screen and (min-width: 1090px) {
+    min-height: 440px;
+  }
 }
 
 .activateDesktop {

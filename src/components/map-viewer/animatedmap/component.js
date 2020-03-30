@@ -88,9 +88,13 @@ function AnimatedMap(props) {
   }
 
   useEffect(() => {
+
+    mapboxgl.accessToken = 'pk.eyJ1IjoianF1aW50ZW4iLCJhIjoiY2s4OXl2a3V6MDYyczNwbzZjcHp6YjJseSJ9.rzGzdhixpKlNd3Q1E0P7Zw'
+
     const map = new mapboxgl.Map({
       container: 'map',
-      style: mapStyle,
+      //style: mapStyle,
+      style: 'mapbox://styles/mapbox/streets-v11',
       zoom: 8,
       minZoom: 4,
       maxZoom: 18,
