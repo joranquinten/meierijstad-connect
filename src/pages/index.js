@@ -29,7 +29,7 @@ const Index = () => {
               <div className='content'>
                 <span className={'page-title'}>Meijerijstad Connect:<br/>Samen verbonden</span>
                 <div className='sub header'>
-                In deze tijd gaat alles even anders dan anders. Maar we staan er niet alleen voor. Wij zien overal om ons heen initiatieven ontstaan. Buren die elkaar willen helpen. Met de boodschappen, het opvangen van kinderen of het uitlaten van de hond. Mensen en bedrijven komen met ideeën om deze tijd leuker, makkelijker en gezelliger te maken voor iedereen. Op dit platform komen al die mogelijkheden samen.<br/><span className="highlighted bold">Meierijstad Connect verbindt ons met elkaar.</span>
+                In deze tijd gaat alles even anders dan anders. Maar we staan er niet alleen voor. Wij zien overal om ons heen initiatieven ontstaan. Buren die elkaar willen helpen. Met de boodschappen, het opvangen van kinderen of het uitlaten van de hond. Mensen en bedrijven komen met ideeën om deze tijd leuker, makkelijker en gezelliger te maken voor iedereen. Op dit platform komen al die mogelijkheden samen.<br/><span className="highlighted bold">MeierijstadConnect verbindt ons met elkaar.</span>
                 </div>
               </div>
             </h1>
