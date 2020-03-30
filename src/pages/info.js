@@ -32,7 +32,7 @@ const Contact = () => {
           aanbieder op de kaart.</p>
 
           <h2>Hoe kan ik helpen?</h2>
-          <p>Je kunt hier je dienst aanbieden. Je aanbod verschijnt dan op de interactieve
+          <p>Je kunt hier je dienst aanbieden. Je aanbod verschijnt dan snel op de interactieve
           kaart.</p>
 
           <h2>Hoe gaan jullie om met de regels van het RIVM?</h2>
