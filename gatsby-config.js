@@ -5,7 +5,7 @@ require('dotenv').config({
 module.exports = {
   siteMetadata: {
     author: 'Joran Quinten',
-    title: 'MeierijstadConnect',
+    title: 'Meierijstad Connect',
     description:
       'Verbindt Meierijstad met elkaar.',
     email: 'connect@qtnconsulting.nl',
@@ -15,8 +15,8 @@ module.exports = {
       handle: 'joranquinten'
     },
     share: {
-      text: 'MeierijstadConnect: het informatienetwerk voor de buurt. Help elkaar veilig door de Coronavirus isolatie heen. 👉 http://https://www.meierijstadconnect.nl/',
-      hashtags: 'MeierijstadConnect,Coronavirus,Blijfveilig,Houdafstand' // separate with commas,
+      text: 'Meierijstad Connect: Verbindt elkaar, help elkaar. 👉 https://www.meierijstadconnect.nl/',
+      hashtags: 'Meierijstad Connect,Coronavirus,Blijfveilig,Houdafstand' // separate with commas,
     },
     menuLinks: [
       {title: 'Home', link: '/', icon: 'map'},

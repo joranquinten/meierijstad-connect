@@ -160,7 +160,7 @@ export function MapAddComponent() {
           <div id='overlay' className='box'>
             <h3>Informatie toevoegen</h3>
             <p>
-              Kies de positie op de kaart om deel te nemen aan MeierijstadConnect.
+              Kies de positie op de kaart om deel te nemen aan Meierijstad Connect.
             </p>
             <button
               className='ui primary button'
