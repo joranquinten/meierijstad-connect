@@ -12,7 +12,7 @@ function CategoryButtons(props) {
       <Button
         onClick={clicked}
         ident='all'
-        selected={props.selected.length === 0 ? ['all'] : props.selected}
+        selected={props.selected.categories.length === 0 ? ['all'] : props.selected}
       >
         Alles
       </Button>
@@ -21,7 +21,7 @@ function CategoryButtons(props) {
           onClick={clicked}
           key={item.ident}
           ident={item.ident}
-          selected={props.selected}
+          selected={props.selected.categories}
         >
           {item.text}
         </Button>
@@ -33,9 +33,7 @@ function CategoryButtons(props) {
 function Button(props) {
   return (
     <button
-      className={`ui basic ${props.ident} ${
-        props.selected.includes(props.ident) ? 'selected' : ''
-      } small button`}
+      className={`ui basic ${props.ident}  small button`}
       onClick={() => props.onClick(props.ident)}
     >
       {props.children}

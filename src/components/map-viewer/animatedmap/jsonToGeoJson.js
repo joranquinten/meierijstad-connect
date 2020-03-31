@@ -12,6 +12,7 @@ export default function JSONtoGeoJSON(props) {
 			},
 			"properties": {
 				"category": val.category,
+				"ask": val.ask,
 				"title": val.title,
 				"description": val.description,
 				"contact": val.contact,
