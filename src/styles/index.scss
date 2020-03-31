@@ -1,5 +1,3 @@
-
-
 /* ADDITIONAL STYLES */
 html {
   // prevents "swimming" layout on mobile
@@ -14,11 +12,11 @@ html {
       position: absolute;
       z-index: -100;
       height: 110%;
-      content: "";
+      content: '';
       top: 5%;
       width: 120vw;
       left: 50%;
-      transform:rotate(1deg) translateX(-60vw);
+      transform: rotate(1deg) translateX(-60vw);
       background-color: rgba(186, 106, 154, 0.1);
     }
   }
@@ -28,9 +26,9 @@ html {
   }
 
   .highlighted {
-    color: #BA6A9A;
+    color: #ba6a9a;
   }
-  
+
   .ui.image.header {
     margin-top: 1rem;
   }
@@ -41,7 +39,7 @@ html {
 
   .page-title {
     font-family: 'Roboto', sans-serif;
-    color: #BA6A9A;
+    color: #ba6a9a;
     line-height: 0.9;
     display: block;
     @media screen and (min-width: 820px) {
@@ -90,7 +88,7 @@ html {
     // background-color: rgb(245, 245, 245);
 
     h2 {
-      font-family: Helvetica Neue,Arial,sans-serif;
+      font-family: Helvetica Neue, Arial, sans-serif;
       font-size: 1em;
       font-weight: bold;
     }
@@ -101,10 +99,16 @@ html {
   }
 
   a {
-    color: #7B97ED;
+    color: #7b97ed;
   }
   .ui.primary.button {
-    background-color: #7B97ED;
+    background-color: #7b97ed;
+  }
+
+  .ui.form .required.fields:not(.grouped) > .field > label:after,
+  .ui.form .required.fields.grouped > label:after,
+  .ui.form .required.field > label:after {
+    position: absolute;
   }
 
   @media only screen and (min-width: 1200px) {

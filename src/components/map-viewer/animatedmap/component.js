@@ -30,11 +30,13 @@ function AnimatedMap(props) {
 
   /* We query all the firebase data here */
 
+  //(filter: {approved: {eq: true}})
   const data = useStaticQuery(graphql`
     query {
       allMapPoints(filter: {approved: {eq: true}}) {
         nodes {
           approved,
+          ask,
           address,
           category,
           contact,
@@ -215,6 +217,8 @@ function AnimatedMap(props) {
             .addTo(map)
         }
       })
+
+      map.setFilter('data', ['==', 'ask', false]);
 
       // Fit Map
       map.fitBounds(

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'gatsby';
 
 import Layout from '../components/layout';
 import Head from '../components/head';
@@ -24,15 +23,11 @@ const Contact = () => {
       <section className='ui vertical segment' style={{minHeight: '55vh'}}>
         <div className='ui text container formcontainer'>
           <h2>Waarom dit initiatief?</h2>
-          <p>Deze tool is bedoeld om mensen en initiatieven met elkaar in contact te brengen. We zien veel acties, aanbod en hulpvragen voorbij komen op sociale media. Op deze kaart zie je in één oogopslag welke mensen en organisaties hulp en diensten aanbieden binnen gemeente Meierijstad.
+          <p>Deze tool is bedoeld om mensen en initiatieven met elkaar in contact te brengen. We zien veel acties, aanbod -en hulpvragen voorbij komen op sociale media. Op deze kaart zie je in één oogopslag <strong>welke mensen en organisaties hulp en diensten aanbieden</strong>, maar ook <strong>wie hulp nodig heeft</strong> binnen je directe omgeving.
           </p>
 
-          <h2>Ik ken iemand die hulp nodig heeft, wat kan ik doen?</h2>
-          <p>Je kunt iemand verwijzen naar deze website. Of leg zelf contact met een
-          aanbieder op de kaart.</p>
-
           <h2>Hoe kan ik helpen?</h2>
-          <p>Je kunt hier je dienst aanbieden. Je aanbod verschijnt dan snel op de interactieve
+          <p>Je kunt hier je dienst of ideeën aanbieden. Je aanbod verschijnt dan snel op de interactieve
           kaart.</p>
 
           <h2>Hoe gaan jullie om met de regels van het RIVM?</h2>

@@ -16,29 +16,29 @@ export const ActivationButton = ({
   return (
     <>
       {!state ? (
-        <div
+        <button
           className='buttonText'
           onClick={() => {
             activate()
             setState(true)
           }}
         >
-          <img src={require('./' + icons[0])} width='30px' />
+          <img src={require('./' + icons[0])} width='30px' alt={buttonTexts[0]} />
           <br />
           {buttonTexts[0]}
-        </div>
+        </button>
       ) : (
-        <div
+        <button
           className='buttonText active'
           onClick={() => {
             deactivate()
             setState(false)
           }}
         >
-          <img src={require('./' + icons[1])} width='20px' />
+          <img src={require('./' + icons[1])} width='20px' alt={buttonTexts[1]} />
           <br />
           {buttonTexts[1]}
-        </div>
+        </button>
       )}
     </>
   )

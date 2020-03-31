@@ -1,9 +1,8 @@
 body {
-
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 1.16rem;
-    font-weight: 200;
-    letter-spacing: 0.2px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1.16rem;
+  font-weight: 200;
+  letter-spacing: 0.2px;
 }
 #app {
   // prevents "swimming" layout on mobile
@@ -13,37 +12,37 @@ body {
   // the React components are being injected into.
 
   min-height: 100vh;
-  color: #352F4F;
+  color: #352f4f;
 
   a {
-    color: #7B97ED;
+    color: #7b97ed;
     &:hover,
     &:focus,
     &:active {
-      color: #BA6A9A;
+      color: #ba6a9a;
     }
   }
 
   .icon-container a {
-    color: #352F4F;
+    color: #352f4f;
   }
 
   .ui.positive.button {
-      background-color: #92D196;
-      color: #352F4F;
+    background-color: #92d196;
+    color: #352f4f;
   }
 
   .ui.basic.black.button {
     border-radius: 3px;
-    color: #352F4F !important;
+    color: #352f4f !important;
     &.active {
-
-    background-color: #BA6A9A !important;
-    color: #fff !important;
+      background-color: #ba6a9a !important;
+      color: #fff !important;
     }
   }
 
-  input, textarea {
+  input,
+  textarea {
     border-radius: 3px;
   }
 
@@ -63,7 +62,6 @@ body {
     line-height: 50px;
   }
 
-
   .ui.text.container {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     font-size: 1.16rem;
@@ -71,31 +69,24 @@ body {
     letter-spacing: 0.2px;
   }
 
-  @keyframes heartbeat
-  {
-    0%
-    {
-      transform: scale( .90 );
+  @keyframes heartbeat {
+    0% {
+      transform: scale(0.9);
     }
-    15%
-    {
-      transform: scale( 1 );
+    15% {
+      transform: scale(1);
     }
-    30%
-    {
-      transform: scale( .90 );
+    30% {
+      transform: scale(0.9);
     }
-    45%
-    {
-      transform: scale( 1 );
+    45% {
+      transform: scale(1);
     }
-    80%
-    {
-      transform: scale( .90 );
+    80% {
+      transform: scale(0.9);
     }
-    100%
-    {
-      transform: scale( .90 );
+    100% {
+      transform: scale(0.9);
     }
   }
 
@@ -105,7 +96,7 @@ body {
     position: relative;
   }
   header:before {
-    content: "";
+    content: '';
     position: absolute;
     top: -50px;
     bottom: 0;
@@ -116,7 +107,7 @@ body {
     background: rgba(146, 209, 150, 0.2);
     transform: rotate(-3deg);
     transform-origin: center;
-}
+  }
 
   header + nav {
     margin-top: 0;
@@ -145,7 +136,7 @@ body {
     margin: 2rem 0 1rem;
 
     > * {
-        font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
       margin: 1rem 0;
 
       h3 {
@@ -163,7 +154,7 @@ body {
     @media only screen and (min-width: 800px) {
       > * {
         width: calc(50% - 1rem);
-      }   
+      }
       > *:nth-child(even) {
         margin-left: 2rem;
       }
@@ -171,9 +162,9 @@ body {
   }
 
   .page-title {
-    margin-top: .5rem;
+    margin-top: 0.5rem;
     font-family: 'Roboto', sans-serif;
-    color: #BA6A9A;
+    color: #ba6a9a;
     line-height: 1.1;
     font-weight: 200;
     display: block;
@@ -185,8 +176,8 @@ body {
     font-size: 1.5rem;
     line-height: 1.4em;
     letter-spacing: 0.2px;
-    color: #352F4F;
-    margin: 1rem auto .5rem auto;
+    color: #352f4f;
+    margin: 1rem auto 0.5rem auto;
   }
 
   .feedback-message {
@@ -217,18 +208,44 @@ body {
       max-width: 550px;
     }
   }
-#map-view {
+  #map-view {
+    position: relative;
+  }
 
-  position: relative;
-}
+  .map-buttons {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+
+    button {
+      border-radius: 4px;
+      font-size: 1.24em;
+      color: #7B97ED;
+      background: #fff;
+      border: 1px solid #7B97ED;
+    }
+    .active {
+      background-color: rgba(123, 151, 237, 0.214)
+    }
+
+    @media only screen and (max-width: 600px) {
+      button {
+        font-size: 1em;
+      }
+    }
+
+    @media only screen and (min-width: 1090px) {
+      margin: 10px 0 30px;
+    }
+  }
+
   .mapform {
-
-    margin: 50px 0 0 0;
+    margin: 20px 0 0 0;
 
     @media only screen and (min-width: 1090px) {
       position: absolute;
       left: 10px;
-      top: 0;
+      top: 90px;
       z-index: 100000;
       margin-top: 10px;
     }
@@ -236,10 +253,11 @@ body {
     // background-color: rgb(245, 245, 245);
 
     h2 {
-      font-family: Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji !important;
+      font-family: Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif,
+        Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji !important;
       font-size: 1em;
       font-weight: bold;
-      margin: calc(2rem - .025em) 0 1rem !important;
+      margin: calc(2rem - 0.025em) 0 1rem !important;
 
       @media only screen and (min-width: 1090px) {
         margin: 0.4rem 0 !important;
@@ -252,5 +270,5 @@ body {
   }
 }
 .ui.inverted.segment {
-  background-color: #352F4F;
+  background-color: #352f4f;
 }
