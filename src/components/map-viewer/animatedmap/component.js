@@ -33,7 +33,7 @@ function AnimatedMap(props) {
   //(filter: {approved: {eq: true}})
   const data = useStaticQuery(graphql`
     query {
-      allMapPoints {
+      allMapPoints(filter: {approved: {eq: true}}) {
         nodes {
           approved,
           ask,
