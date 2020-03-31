@@ -23,7 +23,7 @@ export function MapViewComponent() {
         for (const i in selectedFilter.categories) {
           catFilter.push(['==', 'category', selectedFilter.categories[i]]);
         }
-        filter = ['all', ['==', 'ask', false], catFilter];
+        filter = ['all', ['==', 'ask', selectedFilter.ask], catFilter];
         map.setFilter('data', filter);
       }
     }
@@ -39,7 +39,7 @@ export function MapViewComponent() {
               setSelectedFilter({ ask: false, categories: [] });
             }}
           >
-            Bekijk het aanbod
+            Bekijk de initiatieven
           </button>
           <button
             className={`ui button ${selectedFilter.ask ? 'active' : ''}`}
@@ -47,7 +47,7 @@ export function MapViewComponent() {
               setSelectedFilter({ ask: true, categories: [] });
             }}
           >
-            Bekijk de vraag
+            Bekijk de vragen
           </button>
         </div>
         <div className="mapform">

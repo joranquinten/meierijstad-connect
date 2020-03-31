@@ -32,20 +32,20 @@ export function MapAddComponent() {
     formTitle: 'Over je vraag',
     title_placeholder:
       'Ik heb hulp nodig met boodschappen / Ik wil graag (video)bellen',
-    category: 'Vraag categorie',
+    category: 'Categorie',
     description: 'Wat heb je nodig?',
     description_placeholder:
-      'Schrijf een korte tekst die omschrijft welke vraag je hebt.',
+      'Omschrijf kort welke vraag je hebt.',
   };
 
   const offerTexts = {
-    formTitle: 'Over je service',
+    formTitle: 'Over je initiatief',
     title_placeholder:
       'Ik wil helpen met boodschappen doen / Ik wil graag (video)bellen',
-    category: 'Service categorie',
+    category: 'Categorie',
     description: 'Wat bied je aan?',
     description_placeholder:
-      'Schrijf een korte tekst die omschrijft welke service je aanbiedt.',
+      'Omschrijf kort wat je aanbiedt.',
   };
 
   const getText = path => {
@@ -187,7 +187,7 @@ export function MapAddComponent() {
         <AnimatedMap getMapObject={m => setMap(m)} enabled={mapActive} />
         {!mapActive && (
           <div id="overlay" className="box">
-            <h3>Informatie toevoegen</h3>
+            <h3>Informatie of vraag toevoegen</h3>
             <p>
               Kies de positie op de kaart om deel te nemen aan Meierijstad
               Connect.
@@ -196,7 +196,7 @@ export function MapAddComponent() {
               className="ui primary button"
               onClick={() => setMapActive(true)}
             >
-              Plaats aanbod
+              Plaats initiatief
             </button>
             <button
               className="ui primary button"
@@ -205,7 +205,7 @@ export function MapAddComponent() {
                 setContent({ ...content, ask: true });
               }}
             >
-              Plaats hulpvraag
+              Plaats vraag
             </button>
           </div>
         )}
@@ -254,119 +254,140 @@ export function MapAddComponent() {
               <p>
                 Vul onderstaande vragen zo goed mogelijk in. Dit wordt
                 weergegeven op de kaart. Momenteel is het mogelijk om{' '}
-                <strong>een categorie</strong> per punt te kiezen. Je kunt
+                <strong>één categorie</strong> per punt te kiezen. Je kunt
                 meerdere punten aanmaken op de kaart.
               </p>
 
               <div className="field">
-                <label>{getText('category')}</label>
-                <select
-                  value={content.category}
-                  className="ui dropdown"
-                  onChange={e =>
-                    setContent({ ...content, category: e.target.value })
-                  }
-                >
-                  <option value="" />
-                  {categories.map(c => (
-                    <option value={c.ident} key={c.ident}>
-                      {c.text}
-                    </option>
-                  ))}
-                </select>
+                <label>
+                  {getText('category')}
+                  <select
+                    value={content.category}
+                    className="ui dropdown"
+                    onChange={e =>
+                      setContent({ ...content, category: e.target.value })
+                    }
+                  >
+                    <option value="" />
+                    {categories.map(c => (
+                      <option value={c.ident} key={c.ident}>
+                        {c.text}
+                      </option>
+                    ))}
+                  </select>
+                </label>
               </div>
 
               <div className="field required">
-                <label>Titel</label>
-                <input
-                  type="text"
-                  name="title"
-                  value={content.title}
-                  onChange={onChange}
-                  placeholder={getText('title_placeholder')}
-                />
+                <label>
+                  Titel
+                  <input
+                    type="text"
+                    name="title"
+                    value={content.title}
+                    onChange={onChange}
+                    placeholder={getText('title_placeholder')}
+                  />
+                </label>
               </div>
 
               <div className="field required">
-                <label>{getText('description')}</label>
-                <textarea
-                  rows={4}
-                  name="description"
-                  onChange={onChange}
-                  placeholder={getText('description_placeholder')}
-                  defaultValue={content.description}
-                />
+                <label>
+                  {getText('description')}
+                  <textarea
+                    rows={4}
+                    name="description"
+                    onChange={onChange}
+                    placeholder={getText('description_placeholder')}
+                    defaultValue={content.description}
+                  />
+                </label>
               </div>
 
               <div className="field required">
-                <label>Hoe komen we in contact?</label>
-                <textarea
-                  rows={4}
-                  name="contact"
-                  placeholder="Dit is publieke informatie, bijvoorbeeld: Whatsapp: 012 234 23 23, Email: xyz@abc.nl"
-                  defaultValue={content.contact}
-                  onChange={onChange}
-                />
+                <label>
+                  Hoe komen we in contact?
+                  <textarea
+                    rows={4}
+                    name="contact"
+                    placeholder="Dit is publieke informatie, bijvoorbeeld: Whatsapp: 012 234 23 23, Email: xyz@abc.nl"
+                    defaultValue={content.contact}
+                    onChange={onChange}
+                  />
+                </label>
               </div>
 
               <div className="field required">
-                <label>Wat is je (post) adres?</label>
-                <textarea
-                  rows={4}
-                  name="address"
-                  placeholder="Hoofdstraat 1, Meierijstad. Dit gebruiken we om de aangegeven locatie te bevestigen."
-                  defaultValue={content.address}
-                  onChange={onChange}
-                />
+                <label>
+                  Wat is je (post) adres?
+                  <textarea
+                    rows={4}
+                    name="address"
+                    placeholder="Hoofdstraat 1, Meierijstad. Dit gebruiken we om de aangegeven locatie te bevestigen."
+                    defaultValue={content.address}
+                    onChange={onChange}
+                  />
+                </label>
               </div>
 
               {!content.ask && (
                 <div className="field">
-                  <label>Je website (niet verplicht)</label>
-                  <input
-                    type="text"
-                    name="url"
-                    placeholder="http..."
-                    defaultValue={content.url}
-                    onChange={onChange}
-                  />
+                  <label>
+                    Je website (niet verplicht)
+                    <input
+                      type="text"
+                      name="url"
+                      placeholder="http..."
+                      defaultValue={content.url}
+                      onChange={onChange}
+                    />
+                  </label>
                 </div>
               )}
 
               <h4 className="ui horizontal divider header">Extra informatie</h4>
-              <p>Dit wordt niet op de website gepubliceerd.</p>
+              <p>
+                Dit wordt niet op de website gepubliceerd, maar gebruiken we
+                voor eventuele nadere afstemming.
+              </p>
 
               <div className="field required">
-                <label>Je naam</label>
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Jan de Vries"
-                  defaultValue={content.name}
-                  onChange={onChange}
-                />
+                <label>
+                  Je naam
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Jan de Vries"
+                    defaultValue={content.name}
+                    onChange={onChange}
+                  />
+                </label>
               </div>
 
               <div className="field required">
-                <label>Je emailadres</label>
-                <input
-                  type="text"
-                  name="email"
-                  placeholder="ik@domein.nl"
-                  defaultValue={content.email}
-                  onChange={onChange}
-                />
+                <label>
+                  Je emailadres
+                  <input
+                    type="text"
+                    name="email"
+                    placeholder="ik@domein.nl"
+                    defaultValue={content.email}
+                    onChange={onChange}
+                  />
+                </label>
               </div>
 
               <div className="field">
-                <label>Je telefoonnummer (niet verplicht)</label>
-                <input
-                  type="text"
-                  name="phone"
-                  placeholder="06..."
-                  defaultValue={content.phone}
-                  onChange={onChange}
-                />
+                <label>
+                  Je telefoonnummer (niet verplicht)
+                  <input
+                    type="text"
+                    name="phone"
+                    placeholder="06..."
+                    defaultValue={content.phone}
+                    onChange={onChange}
+                  />
+                </label>
               </div>
 
               {showError && (

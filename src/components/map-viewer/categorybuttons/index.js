@@ -33,7 +33,9 @@ function CategoryButtons(props) {
 function Button(props) {
   return (
     <button
-      className={`ui basic ${props.ident}  small button`}
+    className={`ui basic ${props.ident} ${
+      Array.isArray(props.selected) && props.selected.includes(props.ident) ? 'selected' : ''
+    } small button`}
       onClick={() => props.onClick(props.ident)}
     >
       {props.children}
