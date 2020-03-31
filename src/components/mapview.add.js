@@ -162,6 +162,9 @@ export function MapAddComponent() {
       setShowError(true);
     } else {
       setFormSent(true);
+      if (window) {
+        window.location.hash = 'formsuccess'
+      }
     }
   };
 
@@ -252,10 +255,9 @@ export function MapAddComponent() {
                 {getText('formTitle')} (publieke informatie)
               </h4>
               <p>
-                Vul onderstaande vragen zo goed mogelijk in. Dit wordt
+                Vul onderstaande formulier zo goed mogelijk in. Dit wordt
                 weergegeven op de kaart. Momenteel is het mogelijk om{' '}
-                <strong>één categorie</strong> per punt te kiezen. Je kunt
-                meerdere punten aanmaken op de kaart.
+                <strong>één categorie</strong> per punt te kiezen. Je kunt natuurlijk ook gewoon meerdere keren iets toevoegen op de kaart.
               </p>
 
               <div className="field">
@@ -321,7 +323,7 @@ export function MapAddComponent() {
                 <label>
                   Wat is je (post) adres?
                   <textarea
-                    rows={4}
+                    rows={2}
                     name="address"
                     placeholder="Hoofdstraat 1, Meierijstad. Dit gebruiken we om de aangegeven locatie te bevestigen."
                     defaultValue={content.address}
@@ -407,7 +409,7 @@ export function MapAddComponent() {
         </div>
       )}
       {formSent && (
-        <div className="ui vertical segment">
+        <div id="formsuccess" className="ui vertical segment">
           <div className="ui text container">
             <div className="ui success message">
               <div className="header">Super!</div>
