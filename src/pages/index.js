@@ -42,7 +42,7 @@ const Index = () => {
                   </div>
                   <div>
                     <h3 className="highlighted">Hulp of initiatief aanbieden?</h3>
-                    <p>Kun jij je buren een handje helpen of wel je een mooi initiatief delen? <Link to="/add">Voeg dit dan toe aan de kaart</Link>. Door onze kennis en krachten te bundelen kunnen we elkaar helpen.</p>
+                    <p>Kun jij je buren een handje helpen of wil je een mooi initiatief delen? <Link to="/add">Voeg dit dan toe aan de kaart</Link>. Door onze kennis en krachten te bundelen kunnen we elkaar helpen.</p>
                   </div>
                 </div>
         </section>
