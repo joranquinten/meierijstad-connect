@@ -1,0 +1,29 @@
+table {
+  background: #ccc;
+  tr {
+    max-height: 2rem;
+       margin: 0;
+    padding: 0;
+
+    &:nth-child(odd) {
+      background-color: #f8f8f8;
+    }
+
+    th,
+    td {
+      max-width: 150px;
+      min-width: 70px;
+      overflow: hidden;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      border: 2px solid #ccc;
+      margin: 0;
+      padding: 0.2rem;
+    }
+    td {
+      font-size: 10px;
+      max-height: 2rem;
+    }
+  }
+}
