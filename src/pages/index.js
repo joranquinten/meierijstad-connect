@@ -27,7 +27,7 @@ const Index = () => {
           <div className='ui container'>
             <h1 className='ui header'>
               <div className='content'>
-                <span className={'page-title'}>Meijerijstad Connect:<br/>Samen verbonden</span>
+                <span className={'page-title'}>Meierijstad Connect:<br/>Samen verbonden</span>
                 <div className='sub header'>
                   In deze tijd hebben we elkaar nodig. We staan er niet alleen voor. Kun jij je buren ergens mee van dienst zijn? Of kun je juist wel wat hulp gebruiken? Bijvoorbeeld met de kinderen of bij de boodschappen. Misschien heb je een hond die nodig uit moet, of zoek je wat afleiding?
                   <br/>Wij zien overal om ons heen initiatieven ontstaan. Mensen en organisaties met ideeën om deze tijd fijner, makkelijker en gezelliger te maken. Op dit platform komen de vragen en ideeën samen.<br/><span className="highlighted bold">Meierijstad Connect verbindt ons met elkaar.</span>
